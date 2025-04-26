@@ -1,0 +1,8 @@
+## 📄 License
+
+MIT License
+```
+
+✅ 这个README是可以直接发布到GitHub、Gitee、PyPI的标准版！
+
+---

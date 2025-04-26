@@ -1,0 +1,18 @@
+# config/config.yaml
+
+app:
+  name: "FastBoot Application"
+  host: "0.0.0.0"
+  port: 8080
+  debug: true  # 是否开启DEBUG模式
+
+logging:
+  level: "INFO"  # 日志等级：DEBUG, INFO, WARNING, ERROR
+
+database:
+  type: "mysql"  # 数据库类型，可以是mysql, postgresql等
+  host: "localhost"
+  port: 3306
+  username: "root"
+  password: "Qin2002."
+  name: "fastboot"
