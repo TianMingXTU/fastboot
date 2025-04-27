@@ -1,7 +1,7 @@
 # fastboot/database.py
 
 from peewee import MySQLDatabase
-from models.user_model import database_proxy
+from models.base_model import database_proxy  # 修改导入路径
 from models.model_register import MODELS
 from fastboot.config import ConfigManager
 from fastboot.logger import Logger

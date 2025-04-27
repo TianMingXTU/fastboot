@@ -49,7 +49,8 @@ main.py                    # 应用启动入口
 1. 安装依赖：
 
 ```bash
-pip install -r requirements.txt
+pip install uv
+uv pip install -r requirements.txt
 ```
 
 2. 启动应用：

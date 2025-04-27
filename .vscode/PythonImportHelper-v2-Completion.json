@@ -1,0 +1,973 @@
+[
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "getpass",
+        "importPath": "getpass",
+        "description": "getpass",
+        "isExtraImport": true,
+        "detail": "getpass",
+        "documentation": {}
+    },
+    {
+        "label": "OptionParser",
+        "importPath": "optparse",
+        "description": "optparse",
+        "isExtraImport": true,
+        "detail": "optparse",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "print_",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "__version__",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "MySQLDatabase",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "DatabaseProxy",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "AutoField",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "CharField",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "DecimalField",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "IntegerField",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "CockroachDatabase",
+        "importPath": "playhouse.cockroachdb",
+        "description": "playhouse.cockroachdb",
+        "isExtraImport": true,
+        "detail": "playhouse.cockroachdb",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "playhouse.reflection",
+        "description": "playhouse.reflection",
+        "isExtraImport": true,
+        "detail": "playhouse.reflection",
+        "documentation": {}
+    },
+    {
+        "label": "BaseController",
+        "importPath": "fastboot.crud.base_controller",
+        "description": "fastboot.crud.base_controller",
+        "isExtraImport": true,
+        "detail": "fastboot.crud.base_controller",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product_model",
+        "description": "models.product_model",
+        "isExtraImport": true,
+        "detail": "models.product_model",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product_model",
+        "description": "models.product_model",
+        "isExtraImport": true,
+        "detail": "models.product_model",
+        "documentation": {}
+    },
+    {
+        "label": "controller",
+        "importPath": "fastboot.router_scanner",
+        "description": "fastboot.router_scanner",
+        "isExtraImport": true,
+        "detail": "fastboot.router_scanner",
+        "documentation": {}
+    },
+    {
+        "label": "controller",
+        "importPath": "fastboot.router_scanner",
+        "description": "fastboot.router_scanner",
+        "isExtraImport": true,
+        "detail": "fastboot.router_scanner",
+        "documentation": {}
+    },
+    {
+        "label": "get",
+        "importPath": "fastboot.router_scanner",
+        "description": "fastboot.router_scanner",
+        "isExtraImport": true,
+        "detail": "fastboot.router_scanner",
+        "documentation": {}
+    },
+    {
+        "label": "post",
+        "importPath": "fastboot.router_scanner",
+        "description": "fastboot.router_scanner",
+        "isExtraImport": true,
+        "detail": "fastboot.router_scanner",
+        "documentation": {}
+    },
+    {
+        "label": "RouterScanner",
+        "importPath": "fastboot.router_scanner",
+        "description": "fastboot.router_scanner",
+        "isExtraImport": true,
+        "detail": "fastboot.router_scanner",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "BaseRepository",
+        "importPath": "fastboot.crud.base_repository",
+        "description": "fastboot.crud.base_repository",
+        "isExtraImport": true,
+        "detail": "fastboot.crud.base_repository",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigManager",
+        "importPath": "fastboot.config",
+        "description": "fastboot.config",
+        "isExtraImport": true,
+        "detail": "fastboot.config",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigManager",
+        "importPath": "fastboot.config",
+        "description": "fastboot.config",
+        "isExtraImport": true,
+        "detail": "fastboot.config",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigManager",
+        "importPath": "fastboot.config",
+        "description": "fastboot.config",
+        "isExtraImport": true,
+        "detail": "fastboot.config",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigManager",
+        "importPath": "fastboot.config",
+        "description": "fastboot.config",
+        "isExtraImport": true,
+        "detail": "fastboot.config",
+        "documentation": {}
+    },
+    {
+        "label": "Logger",
+        "importPath": "fastboot.logger",
+        "description": "fastboot.logger",
+        "isExtraImport": true,
+        "detail": "fastboot.logger",
+        "documentation": {}
+    },
+    {
+        "label": "Logger",
+        "importPath": "fastboot.logger",
+        "description": "fastboot.logger",
+        "isExtraImport": true,
+        "detail": "fastboot.logger",
+        "documentation": {}
+    },
+    {
+        "label": "Logger",
+        "importPath": "fastboot.logger",
+        "description": "fastboot.logger",
+        "isExtraImport": true,
+        "detail": "fastboot.logger",
+        "documentation": {}
+    },
+    {
+        "label": "Logger",
+        "importPath": "fastboot.logger",
+        "description": "fastboot.logger",
+        "isExtraImport": true,
+        "detail": "fastboot.logger",
+        "documentation": {}
+    },
+    {
+        "label": "Logger",
+        "importPath": "fastboot.logger",
+        "description": "fastboot.logger",
+        "isExtraImport": true,
+        "detail": "fastboot.logger",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceManager",
+        "importPath": "fastboot.service_manager",
+        "description": "fastboot.service_manager",
+        "isExtraImport": true,
+        "detail": "fastboot.service_manager",
+        "documentation": {}
+    },
+    {
+        "label": "ExceptionHandler",
+        "importPath": "fastboot.exception_handler",
+        "description": "fastboot.exception_handler",
+        "isExtraImport": true,
+        "detail": "fastboot.exception_handler",
+        "documentation": {}
+    },
+    {
+        "label": "ExceptionHandler",
+        "importPath": "fastboot.exception_handler",
+        "description": "fastboot.exception_handler",
+        "isExtraImport": true,
+        "detail": "fastboot.exception_handler",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "importPath": "fastboot.database",
+        "description": "fastboot.database",
+        "isExtraImport": true,
+        "detail": "fastboot.database",
+        "documentation": {}
+    },
+    {
+        "label": "yaml",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "yaml",
+        "description": "yaml",
+        "detail": "yaml",
+        "documentation": {}
+    },
+    {
+        "label": "database_proxy",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "MODELS",
+        "importPath": "models.model_register",
+        "description": "models.model_register",
+        "isExtraImport": true,
+        "detail": "models.model_register",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "RequestValidationError",
+        "importPath": "fastapi.exceptions",
+        "description": "fastapi.exceptions",
+        "isExtraImport": true,
+        "detail": "fastapi.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi.exceptions",
+        "description": "fastapi.exceptions",
+        "isExtraImport": true,
+        "detail": "fastapi.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "importlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "importlib",
+        "description": "importlib",
+        "detail": "importlib",
+        "documentation": {}
+    },
+    {
+        "label": "inspect",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "inspect",
+        "description": "inspect",
+        "detail": "inspect",
+        "documentation": {}
+    },
+    {
+        "label": "model_to_dict",
+        "importPath": "playhouse.shortcuts",
+        "description": "playhouse.shortcuts",
+        "isExtraImport": true,
+        "detail": "playhouse.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "TestClient",
+        "importPath": "fastapi.testclient",
+        "description": "fastapi.testclient",
+        "isExtraImport": true,
+        "detail": "fastapi.testclient",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "FastBootApp",
+        "importPath": "fastboot.application",
+        "description": "fastboot.application",
+        "isExtraImport": true,
+        "detail": "fastboot.application",
+        "documentation": {}
+    },
+    {
+        "label": "setup",
+        "importPath": "setuptools",
+        "description": "setuptools",
+        "isExtraImport": true,
+        "detail": "setuptools",
+        "documentation": {}
+    },
+    {
+        "label": "find_packages",
+        "importPath": "setuptools",
+        "description": "setuptools",
+        "isExtraImport": true,
+        "detail": "setuptools",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "kind": 6,
+        "importPath": ".venv.Scripts.pwiz",
+        "description": ".venv.Scripts.pwiz",
+        "peekOfCode": "class BaseModel(Model):\n    class Meta:\n        database = database\n\"\"\"\nUNKNOWN_FIELD = \"\"\"\\\nclass UnknownField(object):\n    def __init__(self, *_, **__): pass\n\"\"\"\nDATABASE_ALIASES = {\n    CockroachDatabase: ['cockroach', 'cockroachdb', 'crdb'],",
+        "detail": ".venv.Scripts.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "UnknownField",
+        "kind": 6,
+        "importPath": ".venv.Scripts.pwiz",
+        "description": ".venv.Scripts.pwiz",
+        "peekOfCode": "class UnknownField(object):\n    def __init__(self, *_, **__): pass\n\"\"\"\nDATABASE_ALIASES = {\n    CockroachDatabase: ['cockroach', 'cockroachdb', 'crdb'],\n    MySQLDatabase: ['mysql', 'mysqldb'],\n    PostgresqlDatabase: ['postgres', 'postgresql'],\n    SqliteDatabase: ['sqlite', 'sqlite3'],\n}\nDATABASE_MAP = dict((value, key)",
+        "detail": ".venv.Scripts.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "make_introspector",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pwiz",
+        "description": ".venv.Scripts.pwiz",
+        "peekOfCode": "def make_introspector(database_type, database_name, **kwargs):\n    if database_type not in DATABASE_MAP:\n        err('Unrecognized database, must be one of: %s' %\n            ', '.join(DATABASE_MAP.keys()))\n        sys.exit(1)\n    schema = kwargs.pop('schema', None)\n    DatabaseClass = DATABASE_MAP[database_type]\n    db = DatabaseClass(database_name, **kwargs)\n    return Introspector.from_database(db, schema=schema)\ndef print_models(introspector, tables=None, preserve_order=False,",
+        "detail": ".venv.Scripts.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "print_models",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pwiz",
+        "description": ".venv.Scripts.pwiz",
+        "peekOfCode": "def print_models(introspector, tables=None, preserve_order=False,\n                 include_views=False, ignore_unknown=False, snake_case=True):\n    database = introspector.introspect(table_names=tables,\n                                       include_views=include_views,\n                                       snake_case=snake_case)\n    db_kwargs = introspector.get_database_kwargs()\n    header = HEADER % (\n        introspector.get_additional_imports(),\n        introspector.get_database_class().__name__,\n        introspector.get_database_name(),",
+        "detail": ".venv.Scripts.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "print_header",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pwiz",
+        "description": ".venv.Scripts.pwiz",
+        "peekOfCode": "def print_header(cmd_line, introspector):\n    timestamp = datetime.datetime.now()\n    print_('# Code generated by:')\n    print_('# python -m pwiz %s' % cmd_line)\n    print_('# Date: %s' % timestamp.strftime('%B %d, %Y %I:%M%p'))\n    print_('# Database: %s' % introspector.get_database_name())\n    print_('# Peewee version: %s' % peewee_version)\n    print_('')\ndef err(msg):\n    sys.stderr.write('\\033[91m%s\\033[0m\\n' % msg)",
+        "detail": ".venv.Scripts.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "err",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pwiz",
+        "description": ".venv.Scripts.pwiz",
+        "peekOfCode": "def err(msg):\n    sys.stderr.write('\\033[91m%s\\033[0m\\n' % msg)\n    sys.stderr.flush()\ndef get_option_parser():\n    parser = OptionParser(usage='usage: %prog [options] database_name')\n    ao = parser.add_option\n    ao('-H', '--host', dest='host')\n    ao('-p', '--port', dest='port', type='int')\n    ao('-u', '--user', dest='user')\n    ao('-P', '--password', dest='password', action='store_true')",
+        "detail": ".venv.Scripts.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "get_option_parser",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pwiz",
+        "description": ".venv.Scripts.pwiz",
+        "peekOfCode": "def get_option_parser():\n    parser = OptionParser(usage='usage: %prog [options] database_name')\n    ao = parser.add_option\n    ao('-H', '--host', dest='host')\n    ao('-p', '--port', dest='port', type='int')\n    ao('-u', '--user', dest='user')\n    ao('-P', '--password', dest='password', action='store_true')\n    engines = sorted(DATABASE_MAP)\n    ao('-e', '--engine', dest='engine', choices=engines,\n       help=('Database type, e.g. sqlite, mysql, postgresql or cockroachdb. '",
+        "detail": ".venv.Scripts.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "get_connect_kwargs",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pwiz",
+        "description": ".venv.Scripts.pwiz",
+        "peekOfCode": "def get_connect_kwargs(options):\n    ops = ('host', 'port', 'user', 'schema')\n    kwargs = dict((o, getattr(options, o)) for o in ops if getattr(options, o))\n    if options.password:\n        kwargs['password'] = getpass()\n    return kwargs\nif __name__ == '__main__':\n    raw_argv = sys.argv\n    parser = get_option_parser()\n    options, args = parser.parse_args()",
+        "detail": ".venv.Scripts.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "HEADER",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pwiz",
+        "description": ".venv.Scripts.pwiz",
+        "peekOfCode": "HEADER = \"\"\"from peewee import *%s\ndatabase = %s('%s'%s)\n\"\"\"\nBASE_MODEL = \"\"\"\\\nclass BaseModel(Model):\n    class Meta:\n        database = database\n\"\"\"\nUNKNOWN_FIELD = \"\"\"\\\nclass UnknownField(object):",
+        "detail": ".venv.Scripts.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "database",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pwiz",
+        "description": ".venv.Scripts.pwiz",
+        "peekOfCode": "database = %s('%s'%s)\n\"\"\"\nBASE_MODEL = \"\"\"\\\nclass BaseModel(Model):\n    class Meta:\n        database = database\n\"\"\"\nUNKNOWN_FIELD = \"\"\"\\\nclass UnknownField(object):\n    def __init__(self, *_, **__): pass",
+        "detail": ".venv.Scripts.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_MODEL",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pwiz",
+        "description": ".venv.Scripts.pwiz",
+        "peekOfCode": "BASE_MODEL = \"\"\"\\\nclass BaseModel(Model):\n    class Meta:\n        database = database\n\"\"\"\nUNKNOWN_FIELD = \"\"\"\\\nclass UnknownField(object):\n    def __init__(self, *_, **__): pass\n\"\"\"\nDATABASE_ALIASES = {",
+        "detail": ".venv.Scripts.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "UNKNOWN_FIELD",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pwiz",
+        "description": ".venv.Scripts.pwiz",
+        "peekOfCode": "UNKNOWN_FIELD = \"\"\"\\\nclass UnknownField(object):\n    def __init__(self, *_, **__): pass\n\"\"\"\nDATABASE_ALIASES = {\n    CockroachDatabase: ['cockroach', 'cockroachdb', 'crdb'],\n    MySQLDatabase: ['mysql', 'mysqldb'],\n    PostgresqlDatabase: ['postgres', 'postgresql'],\n    SqliteDatabase: ['sqlite', 'sqlite3'],\n}",
+        "detail": ".venv.Scripts.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_ALIASES",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pwiz",
+        "description": ".venv.Scripts.pwiz",
+        "peekOfCode": "DATABASE_ALIASES = {\n    CockroachDatabase: ['cockroach', 'cockroachdb', 'crdb'],\n    MySQLDatabase: ['mysql', 'mysqldb'],\n    PostgresqlDatabase: ['postgres', 'postgresql'],\n    SqliteDatabase: ['sqlite', 'sqlite3'],\n}\nDATABASE_MAP = dict((value, key)\n                    for key in DATABASE_ALIASES\n                    for value in DATABASE_ALIASES[key])\ndef make_introspector(database_type, database_name, **kwargs):",
+        "detail": ".venv.Scripts.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_MAP",
+        "kind": 5,
+        "importPath": ".venv.Scripts.pwiz",
+        "description": ".venv.Scripts.pwiz",
+        "peekOfCode": "DATABASE_MAP = dict((value, key)\n                    for key in DATABASE_ALIASES\n                    for value in DATABASE_ALIASES[key])\ndef make_introspector(database_type, database_name, **kwargs):\n    if database_type not in DATABASE_MAP:\n        err('Unrecognized database, must be one of: %s' %\n            ', '.join(DATABASE_MAP.keys()))\n        sys.exit(1)\n    schema = kwargs.pop('schema', None)\n    DatabaseClass = DATABASE_MAP[database_type]",
+        "detail": ".venv.Scripts.pwiz",
+        "documentation": {}
+    },
+    {
+        "label": "ProductController",
+        "kind": 6,
+        "importPath": "controllers.product_controller",
+        "description": "controllers.product_controller",
+        "peekOfCode": "class ProductController(BaseController):\n    model = Product\n    prefix = \"/product\"",
+        "detail": "controllers.product_controller",
+        "documentation": {}
+    },
+    {
+        "label": "BaseController",
+        "kind": 6,
+        "importPath": "fastboot.crud.base_controller",
+        "description": "fastboot.crud.base_controller",
+        "peekOfCode": "class BaseController:\n    \"\"\"基础Controller，自动提供标准CRUD接口。\"\"\"\n    model = None  # 必须子类指定\n    prefix = \"/base\"  # 必须子类指定\n    def __init__(self):\n        from fastboot.crud.base_service import BaseService\n        if self.model is None:\n            raise ValueError(\"model 未指定\")\n        self.service = BaseService(self.model)\n    @post(\"/create\")",
+        "detail": "fastboot.crud.base_controller",
+        "documentation": {}
+    },
+    {
+        "label": "BaseRepository",
+        "kind": 6,
+        "importPath": "fastboot.crud.base_repository",
+        "description": "fastboot.crud.base_repository",
+        "peekOfCode": "class BaseRepository:\n    \"\"\"基础Repository，提供create, get, update, delete等操作。\"\"\"\n    def __init__(self, model):\n        self.model = model\n    def create(self, **kwargs):\n        \"\"\"创建新记录\"\"\"\n        return self.model.create(**kwargs)\n    def get_by_id(self, id):\n        \"\"\"根据ID查询\"\"\"\n        try:",
+        "detail": "fastboot.crud.base_repository",
+        "documentation": {}
+    },
+    {
+        "label": "BaseService",
+        "kind": 6,
+        "importPath": "fastboot.crud.base_service",
+        "description": "fastboot.crud.base_service",
+        "peekOfCode": "class BaseService:\n    \"\"\"基础Service，直接封装Repository的标准操作。\"\"\"\n    def __init__(self, model):\n        self.repository = BaseRepository(model)\n    def create(self, **kwargs):\n        return self.repository.create(**kwargs)\n    def get_by_id(self, id):\n        return self.repository.get_by_id(id)\n    def get_all(self):\n        return self.repository.get_all()",
+        "detail": "fastboot.crud.base_service",
+        "documentation": {}
+    },
+    {
+        "label": "FastBootApp",
+        "kind": 6,
+        "importPath": "fastboot.application",
+        "description": "fastboot.application",
+        "peekOfCode": "class FastBootApp:\n    def __init__(self):\n        self.app = FastAPI()\n        self.config = ConfigManager()\n        self.logger = Logger()\n        self.database = Database()   # 初始化数据库连接\n        self.services = ServiceManager()\n        self.router_scanner = RouterScanner(self.app)\n        self.exception_handler = ExceptionHandler(self.app)\n        # 从配置文件中读取host和port",
+        "detail": "fastboot.application",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigManager",
+        "kind": 6,
+        "importPath": "fastboot.config",
+        "description": "fastboot.config",
+        "peekOfCode": "class ConfigManager:\n    \"\"\"配置管理器，负责加载和访问YAML格式的配置文件。\n    这个类提供了一个统一的配置访问接口，支持默认值和点分隔的键访问。\n    配置文件默认位于项目根目录的config/config.yaml。\n    Attributes:\n        _config_data (dict): 存储加载的配置数据的字典。\n    Raises:\n        FileNotFoundError: 当配置文件不存在时抛出。\n    \"\"\"\n    def __init__(self, config_path=None):",
+        "detail": "fastboot.config",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "kind": 6,
+        "importPath": "fastboot.database",
+        "description": "fastboot.database",
+        "peekOfCode": "class Database:\n    \"\"\"数据库初始化器\"\"\"\n    def __init__(self):\n        config = ConfigManager()\n        self.logger = Logger()\n        db_config = config.get(\"database\")\n        # 创建数据库连接\n        self.db = MySQLDatabase(\n            db_config[\"name\"],\n            host=db_config[\"host\"],",
+        "detail": "fastboot.database",
+        "documentation": {}
+    },
+    {
+        "label": "ExceptionHandler",
+        "kind": 6,
+        "importPath": "fastboot.exception_handler",
+        "description": "fastboot.exception_handler",
+        "peekOfCode": "class ExceptionHandler:\n    \"\"\"统一异常处理器，用于捕获并格式化系统错误。\"\"\"\n    def __init__(self, app):\n        \"\"\"初始化并注册异常处理器。\n        Args:\n            app (FastAPI): FastAPI应用实例。\n        \"\"\"\n        self.app = app\n        self.logger = Logger()\n        self.register_handlers()",
+        "detail": "fastboot.exception_handler",
+        "documentation": {}
+    },
+    {
+        "label": "Logger",
+        "kind": 6,
+        "importPath": "fastboot.logger",
+        "description": "fastboot.logger",
+        "peekOfCode": "class Logger:\n    \"\"\"FastBoot日志管理器，负责统一日志输出，防止多次初始化。\"\"\"\n    COLOR_MAP = {\n        \"DEBUG\": \"\\033[94m\",\n        \"INFO\": \"\\033[92m\",\n        \"WARNING\": \"\\033[93m\",\n        \"ERROR\": \"\\033[91m\",\n        \"RESET\": \"\\033[0m\",\n    }\n    _logger_instance = None  # 单例缓存",
+        "detail": "fastboot.logger",
+        "documentation": {}
+    },
+    {
+        "label": "RouterScanner",
+        "kind": 6,
+        "importPath": "fastboot.router_scanner",
+        "description": "fastboot.router_scanner",
+        "peekOfCode": "class RouterScanner:\n    \"\"\"自动扫描controllers目录下的Controller并注册路由\"\"\"\n    def __init__(self, app):\n        self.app = app\n        self.logger = Logger()\n        self.scan_controllers()\n    def scan_controllers(self):\n        \"\"\"扫描controllers目录并注册路由\"\"\"\n        controllers_path = os.path.join(os.getcwd(), \"controllers\")\n        if not os.path.exists(controllers_path):",
+        "detail": "fastboot.router_scanner",
+        "documentation": {}
+    },
+    {
+        "label": "controller",
+        "kind": 2,
+        "importPath": "fastboot.router_scanner",
+        "description": "fastboot.router_scanner",
+        "peekOfCode": "def controller(prefix: str):\n    \"\"\"给类打上路由前缀标记\"\"\"\n    def wrapper(cls):\n        cls.__route_prefix__ = prefix\n        return cls\n    return wrapper\ndef get(path: str):\n    \"\"\"给方法打上GET路由标记\"\"\"\n    def wrapper(func):\n        func.__method__ = \"GET\"",
+        "detail": "fastboot.router_scanner",
+        "documentation": {}
+    },
+    {
+        "label": "get",
+        "kind": 2,
+        "importPath": "fastboot.router_scanner",
+        "description": "fastboot.router_scanner",
+        "peekOfCode": "def get(path: str):\n    \"\"\"给方法打上GET路由标记\"\"\"\n    def wrapper(func):\n        func.__method__ = \"GET\"\n        func.__path__ = path\n        return func\n    return wrapper\ndef post(path: str):\n    \"\"\"给方法打上POST路由标记\"\"\"\n    def wrapper(func):",
+        "detail": "fastboot.router_scanner",
+        "documentation": {}
+    },
+    {
+        "label": "post",
+        "kind": 2,
+        "importPath": "fastboot.router_scanner",
+        "description": "fastboot.router_scanner",
+        "peekOfCode": "def post(path: str):\n    \"\"\"给方法打上POST路由标记\"\"\"\n    def wrapper(func):\n        func.__method__ = \"POST\"\n        func.__path__ = path\n        return func\n    return wrapper\nclass RouterScanner:\n    \"\"\"自动扫描controllers目录下的Controller并注册路由\"\"\"\n    def __init__(self, app):",
+        "detail": "fastboot.router_scanner",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceManager",
+        "kind": 6,
+        "importPath": "fastboot.service_manager",
+        "description": "fastboot.service_manager",
+        "peekOfCode": "class ServiceManager:\n    \"\"\"Service组件管理器，统一管理注册的Service实例。\"\"\"\n    def __init__(self):\n        \"\"\"初始化Service管理器（当前无自动扫描）。\"\"\"\n        self.logger = Logger()\n        self.services = {}\n    def register_service(self, name: str, service_instance):\n        \"\"\"手动注册一个Service实例（预留扩展功能）。\n        Args:\n            name (str): Service名称",
+        "detail": "fastboot.service_manager",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "kind": 6,
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "peekOfCode": "class BaseModel(Model):\n    \"\"\"所有模型统一继承的基类\"\"\"\n    class Meta:\n        database = database_proxy\n    def to_dict(self):\n        \"\"\"将模型对象转换为字典\"\"\"\n        return model_to_dict(self)",
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "database_proxy",
+        "kind": 5,
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "peekOfCode": "database_proxy = DatabaseProxy()\nclass BaseModel(Model):\n    \"\"\"所有模型统一继承的基类\"\"\"\n    class Meta:\n        database = database_proxy\n    def to_dict(self):\n        \"\"\"将模型对象转换为字典\"\"\"\n        return model_to_dict(self)",
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "MODELS",
+        "kind": 5,
+        "importPath": "models.model_register",
+        "description": "models.model_register",
+        "peekOfCode": "MODELS = [\n    Product,\n    # 以后新加的表继续往这里加\n]",
+        "detail": "models.model_register",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "kind": 6,
+        "importPath": "models.product_model",
+        "description": "models.product_model",
+        "peekOfCode": "class Product(BaseModel):\n    \"\"\"商品表模型\"\"\"\n    id = AutoField(primary_key=True)  # 自增主键\n    name = CharField(max_length=255, unique=True, null=False)  # 商品名称，唯一约束\n    price = DecimalField(max_digits=10, decimal_places=2, null=False)  # 商品价格，货币型\n    stock = IntegerField(default=0)  # 库存数量，默认0",
+        "detail": "models.product_model",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "kind": 5,
+        "importPath": "tests.test_config",
+        "description": "tests.test_config",
+        "peekOfCode": "config = ConfigManager()\nprint(config.get(\"database.host\"))  # 输出 localhost\nprint(config.get(\"server.port\"))    # 输出 8000\nprint(config.get(\"not.exist\", default=\"N/A\"))  # 输出 N/A",
+        "detail": "tests.test_config",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "kind": 6,
+        "importPath": "tests.test_exception_handler",
+        "description": "tests.test_exception_handler",
+        "peekOfCode": "class Item(BaseModel):\n    name: str\n    description: str = None\n    price: float\n    tax: float = None\n@app.post(\"/items/\")\nasync def create_item(item: Item):\n    return item\n# 定义一个简单的路由来触发全局异常\n@app.get(\"/global_exception\")",
+        "detail": "tests.test_exception_handler",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "tests.test_exception_handler",
+        "description": "tests.test_exception_handler",
+        "peekOfCode": "app = FastAPI()\n# 初始化异常处理器\nexception_handler = ExceptionHandler(app)\n# 定义一个简单的路由来触发 HTTPException\n@app.get(\"/http_exception\")\nasync def trigger_http_exception():\n    raise HTTPException(status_code=404, detail=\"Item not found\")\n# 定义一个简单的路由来触发 RequestValidationError\nclass Item(BaseModel):\n    name: str",
+        "detail": "tests.test_exception_handler",
+        "documentation": {}
+    },
+    {
+        "label": "exception_handler",
+        "kind": 5,
+        "importPath": "tests.test_exception_handler",
+        "description": "tests.test_exception_handler",
+        "peekOfCode": "exception_handler = ExceptionHandler(app)\n# 定义一个简单的路由来触发 HTTPException\n@app.get(\"/http_exception\")\nasync def trigger_http_exception():\n    raise HTTPException(status_code=404, detail=\"Item not found\")\n# 定义一个简单的路由来触发 RequestValidationError\nclass Item(BaseModel):\n    name: str\n    description: str = None\n    price: float",
+        "detail": "tests.test_exception_handler",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "tests.test_exception_handler",
+        "description": "tests.test_exception_handler",
+        "peekOfCode": "client = TestClient(app)\n# 测试 HTTPException\nresponse = client.get(\"/http_exception\")\nprint(\"HTTPException Test:\", response.json())\n# 测试 RequestValidationError\nresponse = client.post(\"/items/\", json={\"name\": \"foo\", \"price\": \"not a float\"})\nprint(\"RequestValidationError Test:\", response.json())\n# 测试全局异常\nresponse = client.get(\"/global_exception\")\nprint(\"Global Exception Test:\", response.json())",
+        "detail": "tests.test_exception_handler",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "tests.test_exception_handler",
+        "description": "tests.test_exception_handler",
+        "peekOfCode": "response = client.get(\"/http_exception\")\nprint(\"HTTPException Test:\", response.json())\n# 测试 RequestValidationError\nresponse = client.post(\"/items/\", json={\"name\": \"foo\", \"price\": \"not a float\"})\nprint(\"RequestValidationError Test:\", response.json())\n# 测试全局异常\nresponse = client.get(\"/global_exception\")\nprint(\"Global Exception Test:\", response.json())",
+        "detail": "tests.test_exception_handler",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "tests.test_exception_handler",
+        "description": "tests.test_exception_handler",
+        "peekOfCode": "response = client.post(\"/items/\", json={\"name\": \"foo\", \"price\": \"not a float\"})\nprint(\"RequestValidationError Test:\", response.json())\n# 测试全局异常\nresponse = client.get(\"/global_exception\")\nprint(\"Global Exception Test:\", response.json())",
+        "detail": "tests.test_exception_handler",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "tests.test_exception_handler",
+        "description": "tests.test_exception_handler",
+        "peekOfCode": "response = client.get(\"/global_exception\")\nprint(\"Global Exception Test:\", response.json())",
+        "detail": "tests.test_exception_handler",
+        "documentation": {}
+    },
+    {
+        "label": "test_create_product",
+        "kind": 2,
+        "importPath": "tests.test_product_api",
+        "description": "tests.test_product_api",
+        "peekOfCode": "def test_create_product():\n    payload = {\"name\": \"Test Product\", \"price\": 100}\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    assert response.status_code == 200\n    data = response.json()\n    print(\"创建返回：\", data)\n    assert data[\"success\"] is True\n    assert isinstance(data[\"data\"], int)  # 返回新创建的ID\n    return data[\"data\"]\ndef test_get_product(product_id):",
+        "detail": "tests.test_product_api",
+        "documentation": {}
+    },
+    {
+        "label": "test_get_product",
+        "kind": 2,
+        "importPath": "tests.test_product_api",
+        "description": "tests.test_product_api",
+        "peekOfCode": "def test_get_product(product_id):\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    assert response.status_code == 200\n    data = response.json()\n    print(\"查询返回：\", data)\n    assert data[\"success\"] is True\n    assert data[\"data\"][\"id\"] == product_id\ndef test_get_all_products():\n    response = requests.get(f\"{BASE_URL}/all\")\n    assert response.status_code == 200",
+        "detail": "tests.test_product_api",
+        "documentation": {}
+    },
+    {
+        "label": "test_get_all_products",
+        "kind": 2,
+        "importPath": "tests.test_product_api",
+        "description": "tests.test_product_api",
+        "peekOfCode": "def test_get_all_products():\n    response = requests.get(f\"{BASE_URL}/all\")\n    assert response.status_code == 200\n    data = response.json()\n    print(\"查询所有返回：\", data)\n    assert data[\"success\"] is True\n    assert isinstance(data[\"data\"], list)\ndef test_update_product(product_id):\n    payload = {\"price\": 200}\n    response = requests.post(f\"{BASE_URL}/update/{product_id}\", json=payload)",
+        "detail": "tests.test_product_api",
+        "documentation": {}
+    },
+    {
+        "label": "test_update_product",
+        "kind": 2,
+        "importPath": "tests.test_product_api",
+        "description": "tests.test_product_api",
+        "peekOfCode": "def test_update_product(product_id):\n    payload = {\"price\": 200}\n    response = requests.post(f\"{BASE_URL}/update/{product_id}\", json=payload)\n    assert response.status_code == 200\n    data = response.json()\n    print(\"更新返回：\", data)\n    assert data[\"success\"] is True\ndef test_delete_product(product_id):\n    response = requests.post(f\"{BASE_URL}/delete/{product_id}\")\n    assert response.status_code == 200",
+        "detail": "tests.test_product_api",
+        "documentation": {}
+    },
+    {
+        "label": "test_delete_product",
+        "kind": 2,
+        "importPath": "tests.test_product_api",
+        "description": "tests.test_product_api",
+        "peekOfCode": "def test_delete_product(product_id):\n    response = requests.post(f\"{BASE_URL}/delete/{product_id}\")\n    assert response.status_code == 200\n    data = response.json()\n    print(\"删除返回：\", data)\n    assert data[\"success\"] is True\ndef test_query_deleted_product(product_id):\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    print(\"查询已删除的返回：\", response.json())\n    assert response.status_code == 404  # 已删除，返回404",
+        "detail": "tests.test_product_api",
+        "documentation": {}
+    },
+    {
+        "label": "test_query_deleted_product",
+        "kind": 2,
+        "importPath": "tests.test_product_api",
+        "description": "tests.test_product_api",
+        "peekOfCode": "def test_query_deleted_product(product_id):\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    print(\"查询已删除的返回：\", response.json())\n    assert response.status_code == 404  # 已删除，返回404\nif __name__ == \"__main__\":\n    new_product_id = test_create_product()\n    test_get_product(new_product_id)\n    test_get_all_products()\n    test_update_product(new_product_id)\n    test_get_product(new_product_id)  # 更新后再查一次",
+        "detail": "tests.test_product_api",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_URL",
+        "kind": 5,
+        "importPath": "tests.test_product_api",
+        "description": "tests.test_product_api",
+        "peekOfCode": "BASE_URL = \"http://localhost:8080/product\"\ndef test_create_product():\n    payload = {\"name\": \"Test Product\", \"price\": 100}\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    assert response.status_code == 200\n    data = response.json()\n    print(\"创建返回：\", data)\n    assert data[\"success\"] is True\n    assert isinstance(data[\"data\"], int)  # 返回新创建的ID\n    return data[\"data\"]",
+        "detail": "tests.test_product_api",
+        "documentation": {}
+    },
+    {
+        "label": "test_register_user",
+        "kind": 2,
+        "importPath": "tests.test_user_api",
+        "description": "tests.test_user_api",
+        "peekOfCode": "def test_register_user():\n    url = f\"{BASE_URL}/user/register\"\n    data = {\n        \"name\": \"Alice\",\n        \"age\": 22\n    }\n    response = requests.post(url, json=data)\n    print(\"注册用户返回：\", response.json())\n    assert response.status_code == 200\n    assert response.json()[\"success\"] == True",
+        "detail": "tests.test_user_api",
+        "documentation": {}
+    },
+    {
+        "label": "test_get_user_info",
+        "kind": 2,
+        "importPath": "tests.test_user_api",
+        "description": "tests.test_user_api",
+        "peekOfCode": "def test_get_user_info(user_id):\n    url = f\"{BASE_URL}/user/info/{user_id}\"\n    response = requests.get(url)\n    print(\"查询用户返回：\", response.json())\n    assert response.status_code == 200\n    assert response.json()[\"success\"] == True\n    assert response.json()[\"data\"][\"id\"] == user_id\ndef test_get_nonexistent_user():\n    url = f\"{BASE_URL}/user/info/99999\"  # 假设这个用户不存在\n    response = requests.get(url)",
+        "detail": "tests.test_user_api",
+        "documentation": {}
+    },
+    {
+        "label": "test_get_nonexistent_user",
+        "kind": 2,
+        "importPath": "tests.test_user_api",
+        "description": "tests.test_user_api",
+        "peekOfCode": "def test_get_nonexistent_user():\n    url = f\"{BASE_URL}/user/info/99999\"  # 假设这个用户不存在\n    response = requests.get(url)\n    print(\"查询不存在用户返回：\", response.json())\n    assert response.status_code == 404 or response.json()[\"success\"] == False\nif __name__ == \"__main__\":\n    # 1. 测试注册用户\n    test_register_user()\n    # 2. 测试查询刚注册的用户（假设是ID 1）\n    test_get_user_info(1)",
+        "detail": "tests.test_user_api",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_URL",
+        "kind": 5,
+        "importPath": "tests.test_user_api",
+        "description": "tests.test_user_api",
+        "peekOfCode": "BASE_URL = \"http://localhost:8080\"\ndef test_register_user():\n    url = f\"{BASE_URL}/user/register\"\n    data = {\n        \"name\": \"Alice\",\n        \"age\": 22\n    }\n    response = requests.post(url, json=data)\n    print(\"注册用户返回：\", response.json())\n    assert response.status_code == 200",
+        "detail": "tests.test_user_api",
+        "documentation": {}
+    }
+]
