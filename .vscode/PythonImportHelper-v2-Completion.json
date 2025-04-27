@@ -67,6 +67,30 @@
         "documentation": {}
     },
     {
+        "label": "Model",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
+        "label": "AutoField",
+        "importPath": "peewee",
+        "description": "peewee",
+        "isExtraImport": true,
+        "detail": "peewee",
+        "documentation": {}
+    },
+    {
         "label": "MySQLDatabase",
         "importPath": "peewee",
         "description": "peewee",
@@ -211,6 +235,14 @@
         "documentation": {}
     },
     {
+        "label": "Body",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -251,11 +283,75 @@
         "documentation": {}
     },
     {
+        "label": "generate_create_request_model",
+        "importPath": "fastboot.crud.request_generator",
+        "description": "fastboot.crud.request_generator",
+        "isExtraImport": true,
+        "detail": "fastboot.crud.request_generator",
+        "documentation": {}
+    },
+    {
+        "label": "generate_update_request_model",
+        "importPath": "fastboot.crud.request_generator",
+        "description": "fastboot.crud.request_generator",
+        "isExtraImport": true,
+        "detail": "fastboot.crud.request_generator",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "create_model",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "BaseRepository",
         "importPath": "fastboot.crud.base_repository",
         "description": "fastboot.crud.base_repository",
         "isExtraImport": true,
         "detail": "fastboot.crud.base_repository",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -455,22 +551,6 @@
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "ValidationError",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
         "label": "TestClient",
         "importPath": "fastapi.testclient",
         "description": "fastapi.testclient",
@@ -651,7 +731,7 @@
         "kind": 6,
         "importPath": "fastboot.crud.base_controller",
         "description": "fastboot.crud.base_controller",
-        "peekOfCode": "class BaseController:\n    \"\"\"基础Controller，自动提供标准CRUD接口。\"\"\"\n    model = None  # 必须子类指定\n    prefix = \"/base\"  # 必须子类指定\n    def __init__(self):\n        from fastboot.crud.base_service import BaseService\n        if self.model is None:\n            raise ValueError(\"model 未指定\")\n        self.service = BaseService(self.model)\n    @post(\"/create\")",
+        "peekOfCode": "class BaseController:\n    \"\"\"基础Controller，统一提供标准CRUD接口。\"\"\"\n    model = None\n    prefix = \"/base\"\n    def __init__(self):\n        from fastboot.crud.base_service import BaseService\n        if self.model is None:\n            raise ValueError(\"必须在子类中指定model！\")\n        self.service = BaseService(self.model)\n        self.CreateRequest = generate_create_request_model(self.model)",
         "detail": "fastboot.crud.base_controller",
         "documentation": {}
     },
@@ -671,6 +751,33 @@
         "description": "fastboot.crud.base_service",
         "peekOfCode": "class BaseService:\n    \"\"\"基础Service，直接封装Repository的标准操作。\"\"\"\n    def __init__(self, model):\n        self.repository = BaseRepository(model)\n    def create(self, **kwargs):\n        return self.repository.create(**kwargs)\n    def get_by_id(self, id):\n        return self.repository.get_by_id(id)\n    def get_all(self):\n        return self.repository.get_all()",
         "detail": "fastboot.crud.base_service",
+        "documentation": {}
+    },
+    {
+        "label": "generate_create_request_model",
+        "kind": 2,
+        "importPath": "fastboot.crud.request_generator",
+        "description": "fastboot.crud.request_generator",
+        "peekOfCode": "def generate_create_request_model(model_cls: Model) -> BaseModel:\n    \"\"\"生成创建用的请求体模型（部分字段必填）\"\"\"\n    fields = {}\n    for name, field in model_cls._meta.fields.items():\n        if isinstance(field, AutoField):\n            continue\n        field_type = map_peewee_field_to_python(field)\n        # 如果字段有默认值或允许为空，则设置为可选\n        if field.default is not None or field.null:\n            fields[name] = (Optional[field_type], field.default)",
+        "detail": "fastboot.crud.request_generator",
+        "documentation": {}
+    },
+    {
+        "label": "generate_update_request_model",
+        "kind": 2,
+        "importPath": "fastboot.crud.request_generator",
+        "description": "fastboot.crud.request_generator",
+        "peekOfCode": "def generate_update_request_model(model_cls: Model) -> BaseModel:\n    \"\"\"生成更新用的请求体模型（字段可选）\"\"\"\n    fields = {}\n    for name, field in model_cls._meta.fields.items():\n        if isinstance(field, AutoField):\n            continue\n        field_type = map_peewee_field_to_python(field)\n        fields[name] = (Optional[field_type], None)\n    UpdateRequestModel = create_model(\n        f\"{model_cls.__name__}UpdateRequest\",",
+        "detail": "fastboot.crud.request_generator",
+        "documentation": {}
+    },
+    {
+        "label": "map_peewee_field_to_python",
+        "kind": 2,
+        "importPath": "fastboot.crud.request_generator",
+        "description": "fastboot.crud.request_generator",
+        "peekOfCode": "def map_peewee_field_to_python(field: Field):\n    \"\"\"将Peewee字段类型映射为Python基础类型\"\"\"\n    from peewee import IntegerField, CharField, DecimalField, FloatField, BooleanField\n    if isinstance(field, IntegerField):\n        return int\n    elif isinstance(field, CharField):\n        return str\n    elif isinstance(field, DecimalField):\n        return float\n    elif isinstance(field, FloatField):",
+        "detail": "fastboot.crud.request_generator",
         "documentation": {}
     },
     {
@@ -795,7 +902,7 @@
         "kind": 6,
         "importPath": "models.product_model",
         "description": "models.product_model",
-        "peekOfCode": "class Product(BaseModel):\n    \"\"\"商品表模型\"\"\"\n    id = AutoField(primary_key=True)  # 自增主键\n    name = CharField(max_length=255, unique=True, null=False)  # 商品名称，唯一约束\n    price = DecimalField(max_digits=10, decimal_places=2, null=False)  # 商品价格，货币型\n    stock = IntegerField(default=0)  # 库存数量，默认0",
+        "peekOfCode": "class Product(BaseModel):\n    \"\"\"商品表模型\"\"\"\n    id = AutoField(primary_key=True)  # 自增主键\n    name = CharField(max_length=255, unique=True, null=False)  # 商品名称，唯一约束\n    price = DecimalField(max_digits=10, decimal_places=2, null=False)  # 商品价格，货币型\n    stock = IntegerField(default=0, null=True)  # 库存数量，默认0，允许为空",
         "detail": "models.product_model",
         "documentation": {}
     },
@@ -876,7 +983,7 @@
         "kind": 2,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "def test_create_product():\n    payload = {\"name\": \"Test Product\", \"price\": 100}\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    assert response.status_code == 200\n    data = response.json()\n    print(\"创建返回：\", data)\n    assert data[\"success\"] is True\n    assert isinstance(data[\"data\"], int)  # 返回新创建的ID\n    return data[\"data\"]\ndef test_get_product(product_id):",
+        "peekOfCode": "def test_create_product():\n    \"\"\"测试创建商品\"\"\"\n    payload = {\n        \"name\": \"Test Product\",\n        \"price\": 100.00,\n        \"stock\": 0  # 添加stock字段\n    }\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    assert response.status_code == 200, f\"创建失败，状态码: {response.status_code}\"\n    data = response.json()",
         "detail": "tests.test_product_api",
         "documentation": {}
     },
@@ -885,7 +992,7 @@
         "kind": 2,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "def test_get_product(product_id):\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    assert response.status_code == 200\n    data = response.json()\n    print(\"查询返回：\", data)\n    assert data[\"success\"] is True\n    assert data[\"data\"][\"id\"] == product_id\ndef test_get_all_products():\n    response = requests.get(f\"{BASE_URL}/all\")\n    assert response.status_code == 200",
+        "peekOfCode": "def test_get_product(product_id: int):\n    \"\"\"测试查询单个商品\"\"\"\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    assert response.status_code == 200, f\"查询失败，状态码: {response.status_code}\"\n    data = response.json()\n    print(\"✅ 查询单个返回:\", data)\n    assert data.get(\"success\") is True\n    assert data[\"data\"][\"id\"] == product_id\ndef test_get_all_products():\n    \"\"\"测试查询所有商品\"\"\"",
         "detail": "tests.test_product_api",
         "documentation": {}
     },
@@ -894,7 +1001,7 @@
         "kind": 2,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "def test_get_all_products():\n    response = requests.get(f\"{BASE_URL}/all\")\n    assert response.status_code == 200\n    data = response.json()\n    print(\"查询所有返回：\", data)\n    assert data[\"success\"] is True\n    assert isinstance(data[\"data\"], list)\ndef test_update_product(product_id):\n    payload = {\"price\": 200}\n    response = requests.post(f\"{BASE_URL}/update/{product_id}\", json=payload)",
+        "peekOfCode": "def test_get_all_products():\n    \"\"\"测试查询所有商品\"\"\"\n    response = requests.get(f\"{BASE_URL}/all\")\n    assert response.status_code == 200, f\"查询全部失败，状态码: {response.status_code}\"\n    data = response.json()\n    print(\"✅ 查询所有返回:\", data)\n    assert data.get(\"success\") is True\n    assert isinstance(data.get(\"data\"), list)\ndef test_update_product(product_id: int):\n    \"\"\"测试更新商品\"\"\"",
         "detail": "tests.test_product_api",
         "documentation": {}
     },
@@ -903,7 +1010,7 @@
         "kind": 2,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "def test_update_product(product_id):\n    payload = {\"price\": 200}\n    response = requests.post(f\"{BASE_URL}/update/{product_id}\", json=payload)\n    assert response.status_code == 200\n    data = response.json()\n    print(\"更新返回：\", data)\n    assert data[\"success\"] is True\ndef test_delete_product(product_id):\n    response = requests.post(f\"{BASE_URL}/delete/{product_id}\")\n    assert response.status_code == 200",
+        "peekOfCode": "def test_update_product(product_id: int):\n    \"\"\"测试更新商品\"\"\"\n    payload = {\n        \"price\": 200.00,\n        \"stock\": 10  # 添加stock字段\n    }\n    response = requests.post(f\"{BASE_URL}/update/{product_id}\", json=payload)\n    assert response.status_code == 200, f\"更新失败，状态码: {response.status_code}\"\n    data = response.json()\n    print(\"✅ 更新返回:\", data)",
         "detail": "tests.test_product_api",
         "documentation": {}
     },
@@ -912,7 +1019,7 @@
         "kind": 2,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "def test_delete_product(product_id):\n    response = requests.post(f\"{BASE_URL}/delete/{product_id}\")\n    assert response.status_code == 200\n    data = response.json()\n    print(\"删除返回：\", data)\n    assert data[\"success\"] is True\ndef test_query_deleted_product(product_id):\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    print(\"查询已删除的返回：\", response.json())\n    assert response.status_code == 404  # 已删除，返回404",
+        "peekOfCode": "def test_delete_product(product_id: int):\n    \"\"\"测试删除商品\"\"\"\n    response = requests.post(f\"{BASE_URL}/delete/{product_id}\")\n    assert response.status_code == 200, f\"删除失败，状态码: {response.status_code}\"\n    data = response.json()\n    print(\"✅ 删除返回:\", data)\n    assert data.get(\"success\") is True\ndef test_query_deleted_product(product_id: int):\n    \"\"\"测试查询已删除的商品\"\"\"\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")",
         "detail": "tests.test_product_api",
         "documentation": {}
     },
@@ -921,7 +1028,7 @@
         "kind": 2,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "def test_query_deleted_product(product_id):\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    print(\"查询已删除的返回：\", response.json())\n    assert response.status_code == 404  # 已删除，返回404\nif __name__ == \"__main__\":\n    new_product_id = test_create_product()\n    test_get_product(new_product_id)\n    test_get_all_products()\n    test_update_product(new_product_id)\n    test_get_product(new_product_id)  # 更新后再查一次",
+        "peekOfCode": "def test_query_deleted_product(product_id: int):\n    \"\"\"测试查询已删除的商品\"\"\"\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    data = response.json()\n    print(\"✅ 查询已删除商品返回:\", data)\n    assert response.status_code == 404, \"已删除商品应返回404\"\nif __name__ == \"__main__\":\n    print(\"🚀 开始测试 FastBoot Product模块 API接口...\")\n    new_product_id = test_create_product()\n    test_get_product(new_product_id)",
         "detail": "tests.test_product_api",
         "documentation": {}
     },
@@ -930,7 +1037,7 @@
         "kind": 5,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "BASE_URL = \"http://localhost:8080/product\"\ndef test_create_product():\n    payload = {\"name\": \"Test Product\", \"price\": 100}\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    assert response.status_code == 200\n    data = response.json()\n    print(\"创建返回：\", data)\n    assert data[\"success\"] is True\n    assert isinstance(data[\"data\"], int)  # 返回新创建的ID\n    return data[\"data\"]",
+        "peekOfCode": "BASE_URL = \"http://localhost:8080/product\"\ndef test_create_product():\n    \"\"\"测试创建商品\"\"\"\n    payload = {\n        \"name\": \"Test Product\",\n        \"price\": 100.00,\n        \"stock\": 0  # 添加stock字段\n    }\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    assert response.status_code == 200, f\"创建失败，状态码: {response.status_code}\"",
         "detail": "tests.test_product_api",
         "documentation": {}
     },
