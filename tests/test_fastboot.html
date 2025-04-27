@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>FastBoot API 测试中心</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    .section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, button {
+      margin-bottom: 10px;
+      padding: 8px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 4px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚀 FastBoot API 测试中心</h1>
+
+  <div class="section">
+    <h2>创建商品</h2>
+    <label for="name">商品名</label>
+    <input type="text" id="name" placeholder="请输入商品名" />
+    <label for="price">价格</label>
+    <input type="number" id="price" placeholder="请输入价格" />
+    <button onclick="createProduct()">创建商品</button>
+  </div>
+
+  <div class="section">
+    <h2>查询商品</h2>
+    <label for="query_id">根据ID查询</label>
+    <input type="number" id="query_id" placeholder="请输入商品ID" />
+    <button onclick="getProductById()">查询商品</button>
+
+    <h3 style="margin-top: 20px;">查询所有商品</h3>
+    <button onclick="getAllProducts()">查询所有</button>
+
+    <h3 style="margin-top: 20px;">根据商品名查询（自定义接口）</h3>
+    <input type="text" id="query_name" placeholder="请输入商品名" />
+    <button onclick="findProductByName()">根据商品名查询</button>
+  </div>
+
+  <div class="section">
+    <h2>更新商品</h2>
+    <label for="update_id">商品ID</label>
+    <input type="number" id="update_id" placeholder="请输入需要更新的商品ID" />
+    <label for="new_price">新价格</label>
+    <input type="number" id="new_price" placeholder="请输入新价格" />
+    <button onclick="updateProduct()">更新商品</button>
+  </div>
+
+  <div class="section">
+    <h2>删除商品</h2>
+    <label for="delete_id">商品ID</label>
+    <input type="number" id="delete_id" placeholder="请输入需要删除的商品ID" />
+    <button onclick="deleteProduct()">删除商品</button>
+  </div>
+
+  <div class="section">
+    <h2>接口返回结果</h2>
+    <pre id="result"></pre>
+  </div>
+
+  <script>
+    const BASE_URL = "http://localhost:8080/product";
+
+    async function createProduct() {
+      const name = document.getElementById('name').value.trim();
+      const price = parseFloat(document.getElementById('price').value);
+
+      if (!name || isNaN(price)) {
+        alert("请输入有效的商品名和价格！");
+        return;
+      }
+
+      const response = await fetch(`${BASE_URL}/create`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, price })
+      });
+      showResult(await response.json());
+    }
+
+    async function getProductById() {
+      const id = parseInt(document.getElementById('query_id').value);
+
+      if (isNaN(id)) {
+        alert("请输入有效的商品ID！");
+        return;
+      }
+
+      const response = await fetch(`${BASE_URL}/get/${id}`);
+      showResult(await response.json());
+    }
+
+    async function getAllProducts() {
+      const response = await fetch(`${BASE_URL}/all`);
+      showResult(await response.json());
+    }
+
+    async function findProductByName() {
+      const name = document.getElementById('query_name').value.trim();
+
+      if (!name) {
+        alert("请输入商品名！");
+        return;
+      }
+
+      // 这里是你自定义的接口，需要你的后端有对应接口，比如 GET /product/search_by_name/{name}
+      const response = await fetch(`${BASE_URL}/search_by_name/${encodeURIComponent(name)}`);
+      showResult(await response.json());
+    }
+
+    async function updateProduct() {
+      const id = parseInt(document.getElementById('update_id').value);
+      const newPrice = parseFloat(document.getElementById('new_price').value);
+
+      if (isNaN(id) || isNaN(newPrice)) {
+        alert("请输入有效的商品ID和新价格！");
+        return;
+      }
+
+      const response = await fetch(`${BASE_URL}/update/${id}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ price: newPrice })
+      });
+      showResult(await response.json());
+    }
+
+    async function deleteProduct() {
+      const id = parseInt(document.getElementById('delete_id').value);
+
+      if (isNaN(id)) {
+        alert("请输入有效的商品ID！");
+        return;
+      }
+
+      const response = await fetch(`${BASE_URL}/delete/${id}`, {
+        method: "POST"
+      });
+      showResult(await response.json());
+    }
+
+    function showResult(data) {
+      document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+    }
+  </script>
+
+</body>
+</html>

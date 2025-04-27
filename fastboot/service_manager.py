@@ -1,40 +1,48 @@
-# fastboot/service_manager.py
-"""ServiceManager模块：用于管理Service实例（目前基于通用CRUD体系，暂不自动扫描）"""
+"""ServiceManager模块：自动扫描services/，管理自定义和内置Service"""
 
+import os
+import importlib
+import inspect
 from fastboot.logger import Logger
-
+from fastboot.crud.base_service import BaseService
 
 class ServiceManager:
-    """Service组件管理器，统一管理注册的Service实例。"""
+    """Service组件管理器，自动发现用户自定义Service，优先使用"""
 
     def __init__(self):
-        """初始化Service管理器（当前无自动扫描）。"""
         self.logger = Logger()
         self.services = {}
+        self.scan_builtin_services()
+        self.scan_user_services()
 
-    def register_service(self, name: str, service_instance):
-        """手动注册一个Service实例（预留扩展功能）。
+    def scan_builtin_services(self):
+        """注册内置BaseService（仅注册）"""
+        self.services["BaseService"] = BaseService
 
-        Args:
-            name (str): Service名称
-            service_instance (object): Service实例
-        """
-        self.services[name] = service_instance
-        self.logger.info(f"Service registered manually: {name}")
+    def scan_user_services(self):
+        """扫描services/目录，注册用户自定义Service"""
+        services_path = os.path.join(os.getcwd(), "services")
+        if not os.path.exists(services_path):
+            self.logger.info("No user services found, using built-in services only.")
+            return
 
-    def get_service(self, name: str):
-        """根据Service名称获取Service实例。
+        for filename in os.listdir(services_path):
+            if filename.endswith(".py") and not filename.startswith("_"):
+                module_name = filename[:-3]
+                module_path = f"services.{module_name}"
 
-        Args:
-            name (str): Service类名（注意大小写）
+                try:
+                    module = importlib.import_module(module_path)
+                except Exception as e:
+                    self.logger.error(f"Failed to import service module {module_path}: {e}")
+                    continue
 
-        Returns:
-            object: Service实例
+                for name, obj in inspect.getmembers(module, inspect.isclass):
+                    if obj.__module__ == module_path:
+                        self.services[name] = obj
+                        self.logger.info(f"Custom Service registered: {name}")
 
-        Raises:
-            KeyError: 如果找不到Service
-        """
-        if name in self.services:
-            return self.services[name]
-        else:
-            raise KeyError(f"Service '{name}' not found.")
+    def get_service_class(self, model_cls):
+        """根据模型推断Service类，优先使用用户自定义"""
+        service_name = f"{model_cls.__name__}Service"
+        return self.services.get(service_name, self.services.get("BaseService"))

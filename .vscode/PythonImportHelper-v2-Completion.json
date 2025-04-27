@@ -163,31 +163,15 @@
         "documentation": {}
     },
     {
-        "label": "BaseController",
-        "importPath": "fastboot.crud.base_controller",
-        "description": "fastboot.crud.base_controller",
-        "isExtraImport": true,
-        "detail": "fastboot.crud.base_controller",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "importPath": "models.product_model",
-        "description": "models.product_model",
-        "isExtraImport": true,
-        "detail": "models.product_model",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "importPath": "models.product_model",
-        "description": "models.product_model",
-        "isExtraImport": true,
-        "detail": "models.product_model",
-        "documentation": {}
-    },
-    {
         "label": "controller",
+        "importPath": "fastboot.router_scanner",
+        "description": "fastboot.router_scanner",
+        "isExtraImport": true,
+        "detail": "fastboot.router_scanner",
+        "documentation": {}
+    },
+    {
+        "label": "get",
         "importPath": "fastboot.router_scanner",
         "description": "fastboot.router_scanner",
         "isExtraImport": true,
@@ -227,7 +211,79 @@
         "documentation": {}
     },
     {
-        "label": "HTTPException",
+        "label": "BaseController",
+        "importPath": "fastboot.crud.base_controller",
+        "description": "fastboot.crud.base_controller",
+        "isExtraImport": true,
+        "detail": "fastboot.crud.base_controller",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product_model",
+        "description": "models.product_model",
+        "isExtraImport": true,
+        "detail": "models.product_model",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product_model",
+        "description": "models.product_model",
+        "isExtraImport": true,
+        "detail": "models.product_model",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product_model",
+        "description": "models.product_model",
+        "isExtraImport": true,
+        "detail": "models.product_model",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "models.product_model",
+        "description": "models.product_model",
+        "isExtraImport": true,
+        "detail": "models.product_model",
+        "documentation": {}
+    },
+    {
+        "label": "SuccessResponse",
+        "importPath": "fastboot.response",
+        "description": "fastboot.response",
+        "isExtraImport": true,
+        "detail": "fastboot.response",
+        "documentation": {}
+    },
+    {
+        "label": "ErrorResponse",
+        "importPath": "fastboot.response",
+        "description": "fastboot.response",
+        "isExtraImport": true,
+        "detail": "fastboot.response",
+        "documentation": {}
+    },
+    {
+        "label": "SuccessResponse",
+        "importPath": "fastboot.response",
+        "description": "fastboot.response",
+        "isExtraImport": true,
+        "detail": "fastboot.response",
+        "documentation": {}
+    },
+    {
+        "label": "ErrorResponse",
+        "importPath": "fastboot.response",
+        "description": "fastboot.response",
+        "isExtraImport": true,
+        "detail": "fastboot.response",
+        "documentation": {}
+    },
+    {
+        "label": "Body",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -235,7 +291,7 @@
         "documentation": {}
     },
     {
-        "label": "Body",
+        "label": "Query",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -252,6 +308,14 @@
     },
     {
         "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -339,91 +403,11 @@
         "documentation": {}
     },
     {
-        "label": "BaseRepository",
-        "importPath": "fastboot.crud.base_repository",
-        "description": "fastboot.crud.base_repository",
+        "label": "ServiceManager",
+        "importPath": "fastboot.service_manager",
+        "description": "fastboot.service_manager",
         "isExtraImport": true,
-        "detail": "fastboot.crud.base_repository",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "ConfigManager",
-        "importPath": "fastboot.config",
-        "description": "fastboot.config",
-        "isExtraImport": true,
-        "detail": "fastboot.config",
-        "documentation": {}
-    },
-    {
-        "label": "ConfigManager",
-        "importPath": "fastboot.config",
-        "description": "fastboot.config",
-        "isExtraImport": true,
-        "detail": "fastboot.config",
-        "documentation": {}
-    },
-    {
-        "label": "ConfigManager",
-        "importPath": "fastboot.config",
-        "description": "fastboot.config",
-        "isExtraImport": true,
-        "detail": "fastboot.config",
-        "documentation": {}
-    },
-    {
-        "label": "ConfigManager",
-        "importPath": "fastboot.config",
-        "description": "fastboot.config",
-        "isExtraImport": true,
-        "detail": "fastboot.config",
-        "documentation": {}
-    },
-    {
-        "label": "Logger",
-        "importPath": "fastboot.logger",
-        "description": "fastboot.logger",
-        "isExtraImport": true,
-        "detail": "fastboot.logger",
-        "documentation": {}
-    },
-    {
-        "label": "Logger",
-        "importPath": "fastboot.logger",
-        "description": "fastboot.logger",
-        "isExtraImport": true,
-        "detail": "fastboot.logger",
-        "documentation": {}
-    },
-    {
-        "label": "Logger",
-        "importPath": "fastboot.logger",
-        "description": "fastboot.logger",
-        "isExtraImport": true,
-        "detail": "fastboot.logger",
-        "documentation": {}
-    },
-    {
-        "label": "Logger",
-        "importPath": "fastboot.logger",
-        "description": "fastboot.logger",
-        "isExtraImport": true,
-        "detail": "fastboot.logger",
-        "documentation": {}
-    },
-    {
-        "label": "Logger",
-        "importPath": "fastboot.logger",
-        "description": "fastboot.logger",
-        "isExtraImport": true,
-        "detail": "fastboot.logger",
+        "detail": "fastboot.service_manager",
         "documentation": {}
     },
     {
@@ -435,6 +419,118 @@
         "documentation": {}
     },
     {
+        "label": "RepositoryManager",
+        "importPath": "fastboot.repository_manager",
+        "description": "fastboot.repository_manager",
+        "isExtraImport": true,
+        "detail": "fastboot.repository_manager",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigManager",
+        "importPath": "fastboot.config",
+        "description": "fastboot.config",
+        "isExtraImport": true,
+        "detail": "fastboot.config",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigManager",
+        "importPath": "fastboot.config",
+        "description": "fastboot.config",
+        "isExtraImport": true,
+        "detail": "fastboot.config",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigManager",
+        "importPath": "fastboot.config",
+        "description": "fastboot.config",
+        "isExtraImport": true,
+        "detail": "fastboot.config",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigManager",
+        "importPath": "fastboot.config",
+        "description": "fastboot.config",
+        "isExtraImport": true,
+        "detail": "fastboot.config",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigManager",
+        "importPath": "fastboot.config",
+        "description": "fastboot.config",
+        "isExtraImport": true,
+        "detail": "fastboot.config",
+        "documentation": {}
+    },
+    {
+        "label": "Logger",
+        "importPath": "fastboot.logger",
+        "description": "fastboot.logger",
+        "isExtraImport": true,
+        "detail": "fastboot.logger",
+        "documentation": {}
+    },
+    {
+        "label": "Logger",
+        "importPath": "fastboot.logger",
+        "description": "fastboot.logger",
+        "isExtraImport": true,
+        "detail": "fastboot.logger",
+        "documentation": {}
+    },
+    {
+        "label": "Logger",
+        "importPath": "fastboot.logger",
+        "description": "fastboot.logger",
+        "isExtraImport": true,
+        "detail": "fastboot.logger",
+        "documentation": {}
+    },
+    {
+        "label": "Logger",
+        "importPath": "fastboot.logger",
+        "description": "fastboot.logger",
+        "isExtraImport": true,
+        "detail": "fastboot.logger",
+        "documentation": {}
+    },
+    {
+        "label": "Logger",
+        "importPath": "fastboot.logger",
+        "description": "fastboot.logger",
+        "isExtraImport": true,
+        "detail": "fastboot.logger",
+        "documentation": {}
+    },
+    {
+        "label": "Logger",
+        "importPath": "fastboot.logger",
+        "description": "fastboot.logger",
+        "isExtraImport": true,
+        "detail": "fastboot.logger",
+        "documentation": {}
+    },
+    {
         "label": "ExceptionHandler",
         "importPath": "fastboot.exception_handler",
         "description": "fastboot.exception_handler",
@@ -448,6 +544,14 @@
         "description": "fastboot.exception_handler",
         "isExtraImport": true,
         "detail": "fastboot.exception_handler",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "importPath": "fastboot.database",
+        "description": "fastboot.database",
+        "isExtraImport": true,
+        "detail": "fastboot.database",
         "documentation": {}
     },
     {
@@ -516,6 +620,15 @@
         "documentation": {}
     },
     {
+        "label": "traceback",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "traceback",
+        "description": "traceback",
+        "detail": "traceback",
+        "documentation": {}
+    },
+    {
         "label": "logging",
         "kind": 6,
         "isExtraImport": true,
@@ -540,6 +653,38 @@
         "importPath": "inspect",
         "description": "inspect",
         "detail": "inspect",
+        "documentation": {}
+    },
+    {
+        "label": "BaseRepository",
+        "importPath": "fastboot.crud.base_repository",
+        "description": "fastboot.crud.base_repository",
+        "isExtraImport": true,
+        "detail": "fastboot.crud.base_repository",
+        "documentation": {}
+    },
+    {
+        "label": "BaseRepository",
+        "importPath": "fastboot.crud.base_repository",
+        "description": "fastboot.crud.base_repository",
+        "isExtraImport": true,
+        "detail": "fastboot.crud.base_repository",
+        "documentation": {}
+    },
+    {
+        "label": "BaseService",
+        "importPath": "fastboot.crud.base_service",
+        "description": "fastboot.crud.base_service",
+        "isExtraImport": true,
+        "detail": "fastboot.crud.base_service",
+        "documentation": {}
+    },
+    {
+        "label": "BaseService",
+        "importPath": "fastboot.crud.base_service",
+        "description": "fastboot.crud.base_service",
+        "isExtraImport": true,
+        "detail": "fastboot.crud.base_service",
         "documentation": {}
     },
     {
@@ -722,7 +867,7 @@
         "kind": 6,
         "importPath": "controllers.product_controller",
         "description": "controllers.product_controller",
-        "peekOfCode": "class ProductController(BaseController):\n    model = Product\n    prefix = \"/product\"",
+        "peekOfCode": "class ProductController(BaseController):\n    model = Product\n    prefix = \"/product\"\n    @get(\"/search_by_name/{name}\")\n    async def search_by_name(self, name: str):  \n        \"\"\"自定义接口：根据商品名查询商品\"\"\"\n        products = self.service.filter_by(name=name)\n        if products:\n            return SuccessResponse.ok([product.__data__ for product in products])\n        else:",
         "detail": "controllers.product_controller",
         "documentation": {}
     },
@@ -731,7 +876,16 @@
         "kind": 6,
         "importPath": "fastboot.crud.base_controller",
         "description": "fastboot.crud.base_controller",
-        "peekOfCode": "class BaseController:\n    \"\"\"基础Controller，统一提供标准CRUD接口。\"\"\"\n    model = None\n    prefix = \"/base\"\n    def __init__(self):\n        from fastboot.crud.base_service import BaseService\n        if self.model is None:\n            raise ValueError(\"必须在子类中指定model！\")\n        self.service = BaseService(self.model)\n        self.CreateRequest = generate_create_request_model(self.model)",
+        "peekOfCode": "class BaseController:\n    \"\"\"基础Controller，统一提供标准CRUD接口，并支持扩展\"\"\"\n    model = None\n    prefix = \"/base\"\n    def __init__(self):\n        if self.model is None:\n            raise ValueError(\"必须在子类中指定model！\")\n        service_cls = service_manager.get_service_class(self.model)\n        self.service = service_cls(self.model)\n        self.CreateRequest = generate_create_request_model(self.model)",
+        "detail": "fastboot.crud.base_controller",
+        "documentation": {}
+    },
+    {
+        "label": "service_manager",
+        "kind": 5,
+        "importPath": "fastboot.crud.base_controller",
+        "description": "fastboot.crud.base_controller",
+        "peekOfCode": "service_manager = ServiceManager()\n@controller(\"/base\")\nclass BaseController:\n    \"\"\"基础Controller，统一提供标准CRUD接口，并支持扩展\"\"\"\n    model = None\n    prefix = \"/base\"\n    def __init__(self):\n        if self.model is None:\n            raise ValueError(\"必须在子类中指定model！\")\n        service_cls = service_manager.get_service_class(self.model)",
         "detail": "fastboot.crud.base_controller",
         "documentation": {}
     },
@@ -740,7 +894,7 @@
         "kind": 6,
         "importPath": "fastboot.crud.base_repository",
         "description": "fastboot.crud.base_repository",
-        "peekOfCode": "class BaseRepository:\n    \"\"\"基础Repository，提供create, get, update, delete等操作。\"\"\"\n    def __init__(self, model):\n        self.model = model\n    def create(self, **kwargs):\n        \"\"\"创建新记录\"\"\"\n        return self.model.create(**kwargs)\n    def get_by_id(self, id):\n        \"\"\"根据ID查询\"\"\"\n        try:",
+        "peekOfCode": "class BaseRepository:\n    \"\"\"基础Repository，提供标准CRUD和扩展查询操作\"\"\"\n    def __init__(self, model):\n        self.model = model\n    def create(self, **kwargs):\n        return self.model.create(**kwargs)\n    def get_by_id(self, id):\n        try:\n            return self.model.get_by_id(id)\n        except self.model.DoesNotExist:",
         "detail": "fastboot.crud.base_repository",
         "documentation": {}
     },
@@ -749,7 +903,16 @@
         "kind": 6,
         "importPath": "fastboot.crud.base_service",
         "description": "fastboot.crud.base_service",
-        "peekOfCode": "class BaseService:\n    \"\"\"基础Service，直接封装Repository的标准操作。\"\"\"\n    def __init__(self, model):\n        self.repository = BaseRepository(model)\n    def create(self, **kwargs):\n        return self.repository.create(**kwargs)\n    def get_by_id(self, id):\n        return self.repository.get_by_id(id)\n    def get_all(self):\n        return self.repository.get_all()",
+        "peekOfCode": "class BaseService:\n    \"\"\"基础Service，封装标准操作，优先挂载用户自定义Repository\"\"\"\n    def __init__(self, model):\n        repository_cls = repository_manager.get_repository_class(model)\n        self.repository = repository_cls(model)\n    def create(self, **kwargs):\n        return self.repository.create(**kwargs)\n    def get_by_id(self, id):\n        return self.repository.get_by_id(id)\n    def get_all(self):",
+        "detail": "fastboot.crud.base_service",
+        "documentation": {}
+    },
+    {
+        "label": "repository_manager",
+        "kind": 5,
+        "importPath": "fastboot.crud.base_service",
+        "description": "fastboot.crud.base_service",
+        "peekOfCode": "repository_manager = RepositoryManager()\nclass BaseService:\n    \"\"\"基础Service，封装标准操作，优先挂载用户自定义Repository\"\"\"\n    def __init__(self, model):\n        repository_cls = repository_manager.get_repository_class(model)\n        self.repository = repository_cls(model)\n    def create(self, **kwargs):\n        return self.repository.create(**kwargs)\n    def get_by_id(self, id):\n        return self.repository.get_by_id(id)",
         "detail": "fastboot.crud.base_service",
         "documentation": {}
     },
@@ -812,7 +975,7 @@
         "kind": 6,
         "importPath": "fastboot.exception_handler",
         "description": "fastboot.exception_handler",
-        "peekOfCode": "class ExceptionHandler:\n    \"\"\"统一异常处理器，用于捕获并格式化系统错误。\"\"\"\n    def __init__(self, app):\n        \"\"\"初始化并注册异常处理器。\n        Args:\n            app (FastAPI): FastAPI应用实例。\n        \"\"\"\n        self.app = app\n        self.logger = Logger()\n        self.register_handlers()",
+        "peekOfCode": "class ExceptionHandler:\n    \"\"\"统一异常处理器，用于捕获并格式化系统错误。\"\"\"\n    def __init__(self, app):\n        \"\"\"初始化并注册异常处理器。\n        Args:\n            app (FastAPI): FastAPI应用实例。\n        \"\"\"\n        self.app = app\n        self.logger = Logger()\n        self.is_dev = os.getenv(\"FASTBOOT_ENV\", \"dev\") == \"dev\"  # 根据环境变量判断",
         "detail": "fastboot.exception_handler",
         "documentation": {}
     },
@@ -823,6 +986,33 @@
         "description": "fastboot.logger",
         "peekOfCode": "class Logger:\n    \"\"\"FastBoot日志管理器，负责统一日志输出，防止多次初始化。\"\"\"\n    COLOR_MAP = {\n        \"DEBUG\": \"\\033[94m\",\n        \"INFO\": \"\\033[92m\",\n        \"WARNING\": \"\\033[93m\",\n        \"ERROR\": \"\\033[91m\",\n        \"RESET\": \"\\033[0m\",\n    }\n    _logger_instance = None  # 单例缓存",
         "detail": "fastboot.logger",
+        "documentation": {}
+    },
+    {
+        "label": "RepositoryManager",
+        "kind": 6,
+        "importPath": "fastboot.repository_manager",
+        "description": "fastboot.repository_manager",
+        "peekOfCode": "class RepositoryManager:\n    \"\"\"Repository组件管理器，自动发现用户自定义Repository，优先使用\"\"\"\n    def __init__(self):\n        self.logger = Logger()\n        self.repositories = {}\n        self.scan_builtin_repositories()\n        self.scan_user_repositories()\n    def scan_builtin_repositories(self):\n        \"\"\"注册内置BaseRepository\"\"\"\n        self.repositories[\"BaseRepository\"] = BaseRepository",
+        "detail": "fastboot.repository_manager",
+        "documentation": {}
+    },
+    {
+        "label": "SuccessResponse",
+        "kind": 6,
+        "importPath": "fastboot.response",
+        "description": "fastboot.response",
+        "peekOfCode": "class SuccessResponse:\n    \"\"\"成功响应封装\"\"\"\n    @staticmethod\n    def ok(data=None):\n        return {\n            \"success\": True,\n            \"data\": data,\n            \"error\": None\n        }\nclass ErrorResponse:",
+        "detail": "fastboot.response",
+        "documentation": {}
+    },
+    {
+        "label": "ErrorResponse",
+        "kind": 6,
+        "importPath": "fastboot.response",
+        "description": "fastboot.response",
+        "peekOfCode": "class ErrorResponse:\n    \"\"\"错误响应封装\"\"\"\n    @staticmethod\n    def fail(error_message: str, status_code: int = 400):\n        raise HTTPException(\n            status_code=status_code,\n            detail={\n                \"success\": False,\n                \"data\": None,\n                \"error\": error_message",
+        "detail": "fastboot.response",
         "documentation": {}
     },
     {
@@ -866,7 +1056,7 @@
         "kind": 6,
         "importPath": "fastboot.service_manager",
         "description": "fastboot.service_manager",
-        "peekOfCode": "class ServiceManager:\n    \"\"\"Service组件管理器，统一管理注册的Service实例。\"\"\"\n    def __init__(self):\n        \"\"\"初始化Service管理器（当前无自动扫描）。\"\"\"\n        self.logger = Logger()\n        self.services = {}\n    def register_service(self, name: str, service_instance):\n        \"\"\"手动注册一个Service实例（预留扩展功能）。\n        Args:\n            name (str): Service名称",
+        "peekOfCode": "class ServiceManager:\n    \"\"\"Service组件管理器，自动发现用户自定义Service，优先使用\"\"\"\n    def __init__(self):\n        self.logger = Logger()\n        self.services = {}\n        self.scan_builtin_services()\n        self.scan_user_services()\n    def scan_builtin_services(self):\n        \"\"\"注册内置BaseService（仅注册）\"\"\"\n        self.services[\"BaseService\"] = BaseService",
         "detail": "fastboot.service_manager",
         "documentation": {}
     },
@@ -902,8 +1092,26 @@
         "kind": 6,
         "importPath": "models.product_model",
         "description": "models.product_model",
-        "peekOfCode": "class Product(BaseModel):\n    \"\"\"商品表模型\"\"\"\n    id = AutoField(primary_key=True)  # 自增主键\n    name = CharField(max_length=255, unique=True, null=False)  # 商品名称，唯一约束\n    price = DecimalField(max_digits=10, decimal_places=2, null=False)  # 商品价格，货币型\n    stock = IntegerField(default=0, null=True)  # 库存数量，默认0，允许为空",
+        "peekOfCode": "class Product(BaseModel):\n    \"\"\"商品表模型\"\"\"\n    id = AutoField(primary_key=True)\n    name = CharField()\n    price = IntegerField()",
         "detail": "models.product_model",
+        "documentation": {}
+    },
+    {
+        "label": "ProductRepository",
+        "kind": 6,
+        "importPath": "repositories.product_repository",
+        "description": "repositories.product_repository",
+        "peekOfCode": "class ProductRepository(BaseRepository):\n    \"\"\"自定义Product数据访问层\"\"\"\n    def get_by_name(self, name: str):\n        \"\"\"根据商品名查询商品\"\"\"\n        return self.model.select().where(self.model.name == name).first()",
+        "detail": "repositories.product_repository",
+        "documentation": {}
+    },
+    {
+        "label": "ProductService",
+        "kind": 6,
+        "importPath": "services.product_service",
+        "description": "services.product_service",
+        "peekOfCode": "class ProductService(BaseService):\n    \"\"\"自定义Product业务逻辑\"\"\"\n    def find_product_by_name(self, name: str):\n        \"\"\"调用自定义Repository方法\"\"\"\n        return self.repository.get_by_name(name)",
+        "detail": "services.product_service",
         "documentation": {}
     },
     {
@@ -983,7 +1191,7 @@
         "kind": 2,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "def test_create_product():\n    \"\"\"测试创建商品\"\"\"\n    payload = {\n        \"name\": \"Test Product\",\n        \"price\": 100.00,\n        \"stock\": 0  # 添加stock字段\n    }\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    assert response.status_code == 200, f\"创建失败，状态码: {response.status_code}\"\n    data = response.json()",
+        "peekOfCode": "def test_create_product():\n    payload = {\"name\": \"FastBoot商品\", \"price\": 888}\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    print(\"创建返回：\", response.json())\n    assert response.status_code == 200\n    return response.json()[\"data\"]\ndef test_get_product(product_id):\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    print(\"查询返回：\", response.json())\n    assert response.status_code == 200",
         "detail": "tests.test_product_api",
         "documentation": {}
     },
@@ -992,25 +1200,16 @@
         "kind": 2,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "def test_get_product(product_id: int):\n    \"\"\"测试查询单个商品\"\"\"\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    assert response.status_code == 200, f\"查询失败，状态码: {response.status_code}\"\n    data = response.json()\n    print(\"✅ 查询单个返回:\", data)\n    assert data.get(\"success\") is True\n    assert data[\"data\"][\"id\"] == product_id\ndef test_get_all_products():\n    \"\"\"测试查询所有商品\"\"\"",
+        "peekOfCode": "def test_get_product(product_id):\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    print(\"查询返回：\", response.json())\n    assert response.status_code == 200\ndef test_find_product_by_name():\n    # 这里我们要直接测试 ProductService.find_product_by_name()\n    from services.product_service import ProductService\n    from models.product_model import Product\n    service = ProductService(Product)\n    product = service.find_product_by_name(\"FastBoot商品\")",
         "detail": "tests.test_product_api",
         "documentation": {}
     },
     {
-        "label": "test_get_all_products",
+        "label": "test_find_product_by_name",
         "kind": 2,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "def test_get_all_products():\n    \"\"\"测试查询所有商品\"\"\"\n    response = requests.get(f\"{BASE_URL}/all\")\n    assert response.status_code == 200, f\"查询全部失败，状态码: {response.status_code}\"\n    data = response.json()\n    print(\"✅ 查询所有返回:\", data)\n    assert data.get(\"success\") is True\n    assert isinstance(data.get(\"data\"), list)\ndef test_update_product(product_id: int):\n    \"\"\"测试更新商品\"\"\"",
-        "detail": "tests.test_product_api",
-        "documentation": {}
-    },
-    {
-        "label": "test_update_product",
-        "kind": 2,
-        "importPath": "tests.test_product_api",
-        "description": "tests.test_product_api",
-        "peekOfCode": "def test_update_product(product_id: int):\n    \"\"\"测试更新商品\"\"\"\n    payload = {\n        \"price\": 200.00,\n        \"stock\": 10  # 添加stock字段\n    }\n    response = requests.post(f\"{BASE_URL}/update/{product_id}\", json=payload)\n    assert response.status_code == 200, f\"更新失败，状态码: {response.status_code}\"\n    data = response.json()\n    print(\"✅ 更新返回:\", data)",
+        "peekOfCode": "def test_find_product_by_name():\n    # 这里我们要直接测试 ProductService.find_product_by_name()\n    from services.product_service import ProductService\n    from models.product_model import Product\n    service = ProductService(Product)\n    product = service.find_product_by_name(\"FastBoot商品\")\n    print(\"根据商品名查找：\", product.__data__ if product else None)\n    assert product is not None\n    assert product.name == \"FastBoot商品\"\ndef test_delete_product(product_id):",
         "detail": "tests.test_product_api",
         "documentation": {}
     },
@@ -1019,16 +1218,16 @@
         "kind": 2,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "def test_delete_product(product_id: int):\n    \"\"\"测试删除商品\"\"\"\n    response = requests.post(f\"{BASE_URL}/delete/{product_id}\")\n    assert response.status_code == 200, f\"删除失败，状态码: {response.status_code}\"\n    data = response.json()\n    print(\"✅ 删除返回:\", data)\n    assert data.get(\"success\") is True\ndef test_query_deleted_product(product_id: int):\n    \"\"\"测试查询已删除的商品\"\"\"\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")",
+        "peekOfCode": "def test_delete_product(product_id):\n    response = requests.post(f\"{BASE_URL}/delete/{product_id}\")\n    print(\"删除返回：\", response.json())\n    assert response.status_code == 200\ndef cleanup():\n    if not db.db.is_closed():\n        db.close()\nif __name__ == \"__main__\":\n    try:\n        print(\"✅ 开始测试FastBoot自定义扩展能力\")",
         "detail": "tests.test_product_api",
         "documentation": {}
     },
     {
-        "label": "test_query_deleted_product",
+        "label": "cleanup",
         "kind": 2,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "def test_query_deleted_product(product_id: int):\n    \"\"\"测试查询已删除的商品\"\"\"\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    data = response.json()\n    print(\"✅ 查询已删除商品返回:\", data)\n    assert response.status_code == 404, \"已删除商品应返回404\"\nif __name__ == \"__main__\":\n    print(\"🚀 开始测试 FastBoot Product模块 API接口...\")\n    new_product_id = test_create_product()\n    test_get_product(new_product_id)",
+        "peekOfCode": "def cleanup():\n    if not db.db.is_closed():\n        db.close()\nif __name__ == \"__main__\":\n    try:\n        print(\"✅ 开始测试FastBoot自定义扩展能力\")\n        product_id = test_create_product()\n        test_get_product(product_id)\n        test_find_product_by_name()\n        test_delete_product(product_id)",
         "detail": "tests.test_product_api",
         "documentation": {}
     },
@@ -1037,7 +1236,16 @@
         "kind": 5,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "BASE_URL = \"http://localhost:8080/product\"\ndef test_create_product():\n    \"\"\"测试创建商品\"\"\"\n    payload = {\n        \"name\": \"Test Product\",\n        \"price\": 100.00,\n        \"stock\": 0  # 添加stock字段\n    }\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    assert response.status_code == 200, f\"创建失败，状态码: {response.status_code}\"",
+        "peekOfCode": "BASE_URL = \"http://localhost:8080/product\"\n# 初始化数据库连接\ndb = Database()\ndef test_create_product():\n    payload = {\"name\": \"FastBoot商品\", \"price\": 888}\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    print(\"创建返回：\", response.json())\n    assert response.status_code == 200\n    return response.json()[\"data\"]\ndef test_get_product(product_id):",
+        "detail": "tests.test_product_api",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "tests.test_product_api",
+        "description": "tests.test_product_api",
+        "peekOfCode": "db = Database()\ndef test_create_product():\n    payload = {\"name\": \"FastBoot商品\", \"price\": 888}\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    print(\"创建返回：\", response.json())\n    assert response.status_code == 200\n    return response.json()[\"data\"]\ndef test_get_product(product_id):\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    print(\"查询返回：\", response.json())",
         "detail": "tests.test_product_api",
         "documentation": {}
     },

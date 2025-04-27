@@ -1,5 +1,6 @@
 # fastboot/application.py
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from fastboot.config import ConfigManager
 from fastboot.logger import Logger
 from fastboot.router_scanner import RouterScanner
@@ -19,6 +20,16 @@ class FastBootApp:
         # 从配置文件中读取host和port
         self.host = self.config.get("app.host", "0.0.0.0")
         self.port = self.config.get("app.port", 8000)
+        
+        # ✅ 添加 CORS 支持
+        self.app.add_middleware(
+            CORSMiddleware,
+            allow_origins=["*"],
+            allow_credentials=True,
+            allow_methods=["*"],
+            allow_headers=["*"],
+        )
+        
 
     def __del__(self):
         """析构函数，确保数据库连接被正确关闭"""
