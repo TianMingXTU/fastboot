@@ -331,6 +331,14 @@
         "documentation": {}
     },
     {
+        "label": "pydantic_model_creator",
+        "importPath": "tortoise.contrib.pydantic",
+        "description": "tortoise.contrib.pydantic",
+        "isExtraImport": true,
+        "detail": "tortoise.contrib.pydantic",
+        "documentation": {}
+    },
+    {
         "label": "RepositoryManager",
         "importPath": "fastboot.repository_manager",
         "description": "fastboot.repository_manager",
@@ -814,7 +822,7 @@
         "kind": 6,
         "importPath": "fastboot.crud.base_controller",
         "description": "fastboot.crud.base_controller",
-        "peekOfCode": "class BaseController:\n    \"\"\"基础Controller，统一提供标准CRUD接口，并支持扩展\"\"\"\n    model = None\n    prefix = \"/base\"\n    def __init__(self):\n        if self.model is None:\n            raise ValueError(\"必须在子类中指定model！\")\n        service_cls = service_manager.get_service_class(self.model)\n        self.service = service_cls(self.model)\n        self.CreateRequest = generate_create_request_model(self.model)",
+        "peekOfCode": "class BaseController:\n    \"\"\"基础Controller，统一提供标准CRUD接口，并支持扩展\"\"\"\n    model = None\n    prefix = \"/base\"\n    def __init__(self):\n        if self.model is None:\n            raise ValueError(\"必须在子类中指定 model！\")\n        service_cls = service_manager.get_service_class(self.model)\n        self.service = service_cls(self.model)\n        self.CreateRequest = generate_create_request_model(self.model)",
         "detail": "fastboot.crud.base_controller",
         "documentation": {}
     },
@@ -823,7 +831,7 @@
         "kind": 5,
         "importPath": "fastboot.crud.base_controller",
         "description": "fastboot.crud.base_controller",
-        "peekOfCode": "service_manager = ServiceManager()\n@controller(\"/base\")\nclass BaseController:\n    \"\"\"基础Controller，统一提供标准CRUD接口，并支持扩展\"\"\"\n    model = None\n    prefix = \"/base\"\n    def __init__(self):\n        if self.model is None:\n            raise ValueError(\"必须在子类中指定model！\")\n        service_cls = service_manager.get_service_class(self.model)",
+        "peekOfCode": "service_manager = ServiceManager()\n@controller(\"/base\")\nclass BaseController:\n    \"\"\"基础Controller，统一提供标准CRUD接口，并支持扩展\"\"\"\n    model = None\n    prefix = \"/base\"\n    def __init__(self):\n        if self.model is None:\n            raise ValueError(\"必须在子类中指定 model！\")\n        service_cls = service_manager.get_service_class(self.model)",
         "detail": "fastboot.crud.base_controller",
         "documentation": {}
     },
@@ -832,7 +840,7 @@
         "kind": 6,
         "importPath": "fastboot.crud.base_repository",
         "description": "fastboot.crud.base_repository",
-        "peekOfCode": "class BaseRepository:\n    \"\"\"基础Repository，提供标准异步CRUD和扩展查询操作\"\"\"\n    def __init__(self, model):\n        self.model = model\n    async def create(self, **kwargs):\n        \"\"\"创建新记录\"\"\"\n        instance = await self.model.create(**kwargs)\n        return instance\n    async def get_by_id(self, id):\n        \"\"\"根据ID查询记录\"\"\"",
+        "peekOfCode": "class BaseRepository:\n    \"\"\"提供通用 CRUD 操作的基类仓库。\n    该类封装了对 ORM 模型的通用数据库操作，支持同步/异步混合操作模式。\n    Attributes:\n        model: 关联的 ORM 模型类\n    \"\"\"\n    def __init__(self, model):\n        \"\"\"初始化仓库实例。\n        Args:\n            model (object): 需要操作的 ORM 模型类",
         "detail": "fastboot.crud.base_repository",
         "documentation": {}
     },
