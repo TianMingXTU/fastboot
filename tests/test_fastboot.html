@@ -9,9 +9,7 @@
       margin: 40px;
       background-color: #f9f9f9;
     }
-    h1 {
-      color: #333;
-    }
+    h1 { color: #333; }
     .section {
       margin-bottom: 30px;
       padding: 20px;
@@ -51,137 +49,150 @@
 </head>
 <body>
 
-  <h1>🚀 FastBoot API 测试中心</h1>
+<h1>🚀 FastBoot API 测试中心</h1>
 
-  <div class="section">
-    <h2>创建商品</h2>
-    <label for="name">商品名</label>
-    <input type="text" id="name" placeholder="请输入商品名" />
-    <label for="price">价格</label>
-    <input type="number" id="price" placeholder="请输入价格" />
-    <button onclick="createProduct()">创建商品</button>
-  </div>
+<div class="section">
+  <h2>创建商品</h2>
+  <label for="name">商品名</label>
+  <input type="text" id="name" placeholder="请输入商品名" />
+  <label for="price">价格</label>
+  <input type="number" id="price" placeholder="请输入价格" />
+  <button onclick="createProduct()">创建商品</button>
+</div>
 
-  <div class="section">
-    <h2>查询商品</h2>
-    <label for="query_id">根据ID查询</label>
-    <input type="number" id="query_id" placeholder="请输入商品ID" />
-    <button onclick="getProductById()">查询商品</button>
+<div class="section">
+  <h2>查询商品</h2>
+  <label for="query_id">根据ID查询</label>
+  <input type="number" id="query_id" placeholder="请输入商品ID" />
+  <button onclick="getProductById()">查询商品</button>
 
-    <h3 style="margin-top: 20px;">查询所有商品</h3>
-    <button onclick="getAllProducts()">查询所有</button>
+  <h3 style="margin-top: 20px;">查询所有商品</h3>
+  <button onclick="getAllProducts()">查询所有</button>
 
-    <h3 style="margin-top: 20px;">根据商品名查询（自定义接口）</h3>
-    <input type="text" id="query_name" placeholder="请输入商品名" />
-    <button onclick="findProductByName()">根据商品名查询</button>
-  </div>
+  <h3 style="margin-top: 20px;">根据商品名查询（自定义接口）</h3>
+  <input type="text" id="query_name" placeholder="请输入商品名" />
+  <button onclick="findProductByName()">根据商品名查询</button>
+</div>
 
-  <div class="section">
-    <h2>更新商品</h2>
-    <label for="update_id">商品ID</label>
-    <input type="number" id="update_id" placeholder="请输入需要更新的商品ID" />
-    <label for="new_price">新价格</label>
-    <input type="number" id="new_price" placeholder="请输入新价格" />
-    <button onclick="updateProduct()">更新商品</button>
-  </div>
+<div class="section">
+  <h2>更新商品</h2>
+  <label for="update_id">商品ID</label>
+  <input type="number" id="update_id" placeholder="请输入需要更新的商品ID" />
+  <label for="new_price">新价格</label>
+  <input type="number" id="new_price" placeholder="请输入新价格" />
+  <button onclick="updateProduct()">更新商品</button>
+</div>
 
-  <div class="section">
-    <h2>删除商品</h2>
-    <label for="delete_id">商品ID</label>
-    <input type="number" id="delete_id" placeholder="请输入需要删除的商品ID" />
-    <button onclick="deleteProduct()">删除商品</button>
-  </div>
+<div class="section">
+  <h2>删除商品</h2>
+  <label for="delete_id">商品ID</label>
+  <input type="number" id="delete_id" placeholder="请输入需要删除的商品ID" />
+  <button onclick="deleteProduct()">删除商品</button>
+</div>
 
-  <div class="section">
-    <h2>接口返回结果</h2>
-    <pre id="result"></pre>
-  </div>
+<div class="section">
+  <h2>接口返回结果</h2>
+  <pre id="result"></pre>
+</div>
 
-  <script>
-    const BASE_URL = "http://localhost:8080/product";
+<div class="section">
+  <h2>调试日志</h2>
+  <pre id="log"></pre>
+</div>
 
-    async function createProduct() {
-      const name = document.getElementById('name').value.trim();
-      const price = parseFloat(document.getElementById('price').value);
+<script>
+const BASE_URL = "http://localhost:8080/product";
 
-      if (!name || isNaN(price)) {
-        alert("请输入有效的商品名和价格！");
-        return;
-      }
+function log(message) {
+  const logArea = document.getElementById('log');
+  const timestamp = new Date().toLocaleTimeString();
+  logArea.innerText += `[${timestamp}] ${message}\n`;
+  logArea.scrollTop = logArea.scrollHeight;
+}
 
-      const response = await fetch(`${BASE_URL}/create`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, price })
-      });
-      showResult(await response.json());
+async function requestAPI(method, url, body = null) {
+  log(`请求: ${method} ${url}`);
+  if (body) {
+    log(`请求体: ${JSON.stringify(body)}`);
+  }
+
+  try {
+    const options = {
+      method: method,
+      headers: { "Content-Type": "application/json" }
+    };
+    if (body) {
+      options.body = JSON.stringify(body);
     }
 
-    async function getProductById() {
-      const id = parseInt(document.getElementById('query_id').value);
+    const response = await fetch(url, options);
+    const data = await response.json();
+    log(`响应状态: ${response.status}`);
+    log(`响应体: ${JSON.stringify(data)}`);
 
-      if (isNaN(id)) {
-        alert("请输入有效的商品ID！");
-        return;
-      }
+    showResult(data);
+    return data;
+  } catch (error) {
+    log(`请求异常: ${error.message}`);
+    alert("请求失败，请检查服务器是否启动！");
+  }
+}
 
-      const response = await fetch(`${BASE_URL}/get/${id}`);
-      showResult(await response.json());
-    }
+async function createProduct() {
+  const name = document.getElementById('name').value.trim();
+  const price = parseFloat(document.getElementById('price').value);
+  if (!name || isNaN(price)) {
+    alert("请输入有效的商品名和价格！");
+    return;
+  }
+  await requestAPI("POST", `${BASE_URL}/create`, { name, price });
+}
 
-    async function getAllProducts() {
-      const response = await fetch(`${BASE_URL}/all`);
-      showResult(await response.json());
-    }
+async function getProductById() {
+  const id = parseInt(document.getElementById('query_id').value);
+  if (isNaN(id)) {
+    alert("请输入有效的商品ID！");
+    return;
+  }
+  await requestAPI("GET", `${BASE_URL}/get/${id}`);
+}
 
-    async function findProductByName() {
-      const name = document.getElementById('query_name').value.trim();
+async function getAllProducts() {
+  await requestAPI("GET", `${BASE_URL}/all`);
+}
 
-      if (!name) {
-        alert("请输入商品名！");
-        return;
-      }
+async function findProductByName() {
+  const name = document.getElementById('query_name').value.trim();
+  if (!name) {
+    alert("请输入商品名！");
+    return;
+  }
+  await requestAPI("GET", `${BASE_URL}/search_by_name/${encodeURIComponent(name)}`);
+}
 
-      // 这里是你自定义的接口，需要你的后端有对应接口，比如 GET /product/search_by_name/{name}
-      const response = await fetch(`${BASE_URL}/search_by_name/${encodeURIComponent(name)}`);
-      showResult(await response.json());
-    }
+async function updateProduct() {
+  const id = parseInt(document.getElementById('update_id').value);
+  const newPrice = parseFloat(document.getElementById('new_price').value);
+  if (isNaN(id) || isNaN(newPrice)) {
+    alert("请输入有效的商品ID和新价格！");
+    return;
+  }
+  await requestAPI("POST", `${BASE_URL}/update/${id}`, { price: newPrice });
+}
 
-    async function updateProduct() {
-      const id = parseInt(document.getElementById('update_id').value);
-      const newPrice = parseFloat(document.getElementById('new_price').value);
+async function deleteProduct() {
+  const id = parseInt(document.getElementById('delete_id').value);
+  if (isNaN(id)) {
+    alert("请输入有效的商品ID！");
+    return;
+  }
+  await requestAPI("POST", `${BASE_URL}/delete/${id}`);
+}
 
-      if (isNaN(id) || isNaN(newPrice)) {
-        alert("请输入有效的商品ID和新价格！");
-        return;
-      }
-
-      const response = await fetch(`${BASE_URL}/update/${id}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ price: newPrice })
-      });
-      showResult(await response.json());
-    }
-
-    async function deleteProduct() {
-      const id = parseInt(document.getElementById('delete_id').value);
-
-      if (isNaN(id)) {
-        alert("请输入有效的商品ID！");
-        return;
-      }
-
-      const response = await fetch(`${BASE_URL}/delete/${id}`, {
-        method: "POST"
-      });
-      showResult(await response.json());
-    }
-
-    function showResult(data) {
-      document.getElementById('result').innerText = JSON.stringify(data, null, 2);
-    }
-  </script>
+function showResult(data) {
+  document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+}
+</script>
 
 </body>
 </html>

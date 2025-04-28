@@ -1,7 +1,7 @@
 # fastboot/application.py
+
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
 from fastboot.config import ConfigManager
 from fastboot.logger import Logger
 from fastboot.router_scanner import RouterScanner
@@ -16,7 +16,7 @@ class FastBootApp:
         self.logger = Logger()
         self.services = ServiceManager()
 
-        # 初始化但不连接
+        # 初始化数据库配置
         self.database.initialize()
 
         # 创建FastAPI实例，挂载lifespan
@@ -32,10 +32,10 @@ class FastBootApp:
     async def _lifespan(self, app: FastAPI):
         """应用生命周期管理"""
         self.logger.info("[FastBoot] 启动中：连接数据库...")
-        self.database.connect()
+        await self.database.connect()
         yield
         self.logger.info("[FastBoot] 关闭中：断开数据库...")
-        self.database.close()
+        await self.database.close()
 
     def _setup(self):
         from fastapi.middleware.cors import CORSMiddleware
