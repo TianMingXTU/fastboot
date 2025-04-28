@@ -12,6 +12,8 @@ BASE_URL = "http://localhost:8080/product"
 
 # 初始化数据库连接
 db = Database()
+db.initialize()  # 添加这行
+db.connect()     # 添加这行
 
 def test_create_product():
     payload = {"name": "FastBoot商品", "price": 888}
@@ -42,8 +44,11 @@ def test_delete_product(product_id):
     assert response.status_code == 200
 
 def cleanup():
-    if not db.db.is_closed():
-        db.close()
+    try:
+        if db and db.db and not db.db.is_closed():
+            db.close()
+    except:
+        pass
 
 if __name__ == "__main__":
     try:

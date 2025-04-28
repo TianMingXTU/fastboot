@@ -435,6 +435,14 @@
         "documentation": {}
     },
     {
+        "label": "asynccontextmanager",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
         "label": "CORSMiddleware",
         "importPath": "fastapi.middleware.cors",
         "description": "fastapi.middleware.cors",
@@ -948,7 +956,7 @@
         "kind": 6,
         "importPath": "fastboot.application",
         "description": "fastboot.application",
-        "peekOfCode": "class FastBootApp:\n    def __init__(self):\n        self.app = FastAPI()\n        self.config = ConfigManager()\n        self.logger = Logger()\n        self.database = Database()   # 初始化数据库连接\n        self.services = ServiceManager()\n        self.router_scanner = RouterScanner(self.app)\n        self.exception_handler = ExceptionHandler(self.app)\n        # 从配置文件中读取host和port",
+        "peekOfCode": "class FastBootApp:\n    def __init__(self):\n        self.database = Database()\n        self.config = ConfigManager()\n        self.logger = Logger()\n        self.services = ServiceManager()\n        # 初始化但不连接\n        self.database.initialize()\n        # 创建FastAPI实例，挂载lifespan\n        self.app = FastAPI(lifespan=self._lifespan)",
         "detail": "fastboot.application",
         "documentation": {}
     },
@@ -966,7 +974,7 @@
         "kind": 6,
         "importPath": "fastboot.database",
         "description": "fastboot.database",
-        "peekOfCode": "class Database:\n    \"\"\"数据库初始化器\"\"\"\n    def __init__(self):\n        config = ConfigManager()\n        self.logger = Logger()\n        db_config = config.get(\"database\")\n        # 创建数据库连接\n        self.db = MySQLDatabase(\n            db_config[\"name\"],\n            host=db_config[\"host\"],",
+        "peekOfCode": "class Database:\n    \"\"\"数据库管理器\"\"\"\n    def __init__(self):\n        self.config = ConfigManager()\n        self.logger = Logger()\n        self.db = None  # 先不连接，只定义\n    def initialize(self):\n        \"\"\"初始化数据库连接对象，不实际连接\"\"\"\n        db_config = self.config.get(\"database\")\n        self.db = MySQLDatabase(",
         "detail": "fastboot.database",
         "documentation": {}
     },
@@ -1218,7 +1226,7 @@
         "kind": 2,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "def test_delete_product(product_id):\n    response = requests.post(f\"{BASE_URL}/delete/{product_id}\")\n    print(\"删除返回：\", response.json())\n    assert response.status_code == 200\ndef cleanup():\n    if not db.db.is_closed():\n        db.close()\nif __name__ == \"__main__\":\n    try:\n        print(\"✅ 开始测试FastBoot自定义扩展能力\")",
+        "peekOfCode": "def test_delete_product(product_id):\n    response = requests.post(f\"{BASE_URL}/delete/{product_id}\")\n    print(\"删除返回：\", response.json())\n    assert response.status_code == 200\ndef cleanup():\n    try:\n        if db and db.db and not db.db.is_closed():\n            db.close()\n    except:\n        pass",
         "detail": "tests.test_product_api",
         "documentation": {}
     },
@@ -1227,7 +1235,7 @@
         "kind": 2,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "def cleanup():\n    if not db.db.is_closed():\n        db.close()\nif __name__ == \"__main__\":\n    try:\n        print(\"✅ 开始测试FastBoot自定义扩展能力\")\n        product_id = test_create_product()\n        test_get_product(product_id)\n        test_find_product_by_name()\n        test_delete_product(product_id)",
+        "peekOfCode": "def cleanup():\n    try:\n        if db and db.db and not db.db.is_closed():\n            db.close()\n    except:\n        pass\nif __name__ == \"__main__\":\n    try:\n        print(\"✅ 开始测试FastBoot自定义扩展能力\")\n        product_id = test_create_product()",
         "detail": "tests.test_product_api",
         "documentation": {}
     },
@@ -1236,7 +1244,7 @@
         "kind": 5,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "BASE_URL = \"http://localhost:8080/product\"\n# 初始化数据库连接\ndb = Database()\ndef test_create_product():\n    payload = {\"name\": \"FastBoot商品\", \"price\": 888}\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    print(\"创建返回：\", response.json())\n    assert response.status_code == 200\n    return response.json()[\"data\"]\ndef test_get_product(product_id):",
+        "peekOfCode": "BASE_URL = \"http://localhost:8080/product\"\n# 初始化数据库连接\ndb = Database()\ndb.initialize()  # 添加这行\ndb.connect()     # 添加这行\ndef test_create_product():\n    payload = {\"name\": \"FastBoot商品\", \"price\": 888}\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    print(\"创建返回：\", response.json())\n    assert response.status_code == 200",
         "detail": "tests.test_product_api",
         "documentation": {}
     },
@@ -1245,7 +1253,7 @@
         "kind": 5,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "db = Database()\ndef test_create_product():\n    payload = {\"name\": \"FastBoot商品\", \"price\": 888}\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    print(\"创建返回：\", response.json())\n    assert response.status_code == 200\n    return response.json()[\"data\"]\ndef test_get_product(product_id):\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    print(\"查询返回：\", response.json())",
+        "peekOfCode": "db = Database()\ndb.initialize()  # 添加这行\ndb.connect()     # 添加这行\ndef test_create_product():\n    payload = {\"name\": \"FastBoot商品\", \"price\": 888}\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    print(\"创建返回：\", response.json())\n    assert response.status_code == 200\n    return response.json()[\"data\"]\ndef test_get_product(product_id):",
         "detail": "tests.test_product_api",
         "documentation": {}
     },

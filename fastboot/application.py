@@ -1,4 +1,5 @@
 # fastboot/application.py
+from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastboot.config import ConfigManager
@@ -10,18 +11,34 @@ from fastboot.database import Database
 
 class FastBootApp:
     def __init__(self):
-        self.app = FastAPI()
+        self.database = Database()
         self.config = ConfigManager()
         self.logger = Logger()
-        self.database = Database()   # 初始化数据库连接
         self.services = ServiceManager()
-        self.router_scanner = RouterScanner(self.app)
-        self.exception_handler = ExceptionHandler(self.app)
-        # 从配置文件中读取host和port
+
+        # 初始化但不连接
+        self.database.initialize()
+
+        # 创建FastAPI实例，挂载lifespan
+        self.app = FastAPI(lifespan=self._lifespan)
+
         self.host = self.config.get("app.host", "0.0.0.0")
         self.port = self.config.get("app.port", 8000)
-        
-        # ✅ 添加 CORS 支持
+
+        # 注册中间件、扫描路由等
+        self._setup()
+
+    @asynccontextmanager
+    async def _lifespan(self, app: FastAPI):
+        """应用生命周期管理"""
+        self.logger.info("[FastBoot] 启动中：连接数据库...")
+        self.database.connect()
+        yield
+        self.logger.info("[FastBoot] 关闭中：断开数据库...")
+        self.database.close()
+
+    def _setup(self):
+        from fastapi.middleware.cors import CORSMiddleware
         self.app.add_middleware(
             CORSMiddleware,
             allow_origins=["*"],
@@ -29,26 +46,12 @@ class FastBootApp:
             allow_methods=["*"],
             allow_headers=["*"],
         )
-        
-
-    def __del__(self):
-        """析构函数，确保数据库连接被正确关闭"""
-        if hasattr(self, 'database'):
-            self.database.close()
+        self.router_scanner = RouterScanner(self.app)
+        self.exception_handler = ExceptionHandler(self.app)
 
     def run(self, host=None, port=None):
-        """启动FastBoot应用。
-
-        Args:
-            host (str, optional): 服务器主机地址. 默认使用配置文件中的值或"0.0.0.0"
-            port (int, optional): 服务器端口. 默认使用配置文件中的值或8000
-        """
         import uvicorn
-        self.logger.info("FastBoot应用初始化完成，正在准备启动服务器...")
-        
-        # 使用传入的参数或默认值
-        final_host = host if host is not None else self.host
-        final_port = port if port is not None else self.port
-        
-        self.logger.info(f"服务器将在 {final_host}:{final_port} 启动")
+        self.logger.info("[FastBoot] 应用初始化完成，准备启动服务器...")
+        final_host = host if host else self.host
+        final_port = port if port else self.port
         uvicorn.run(self.app, host=final_host, port=final_port)
