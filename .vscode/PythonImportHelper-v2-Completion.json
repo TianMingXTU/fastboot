@@ -67,86 +67,6 @@
         "documentation": {}
     },
     {
-        "label": "Model",
-        "importPath": "peewee",
-        "description": "peewee",
-        "isExtraImport": true,
-        "detail": "peewee",
-        "documentation": {}
-    },
-    {
-        "label": "Field",
-        "importPath": "peewee",
-        "description": "peewee",
-        "isExtraImport": true,
-        "detail": "peewee",
-        "documentation": {}
-    },
-    {
-        "label": "AutoField",
-        "importPath": "peewee",
-        "description": "peewee",
-        "isExtraImport": true,
-        "detail": "peewee",
-        "documentation": {}
-    },
-    {
-        "label": "MySQLDatabase",
-        "importPath": "peewee",
-        "description": "peewee",
-        "isExtraImport": true,
-        "detail": "peewee",
-        "documentation": {}
-    },
-    {
-        "label": "Model",
-        "importPath": "peewee",
-        "description": "peewee",
-        "isExtraImport": true,
-        "detail": "peewee",
-        "documentation": {}
-    },
-    {
-        "label": "DatabaseProxy",
-        "importPath": "peewee",
-        "description": "peewee",
-        "isExtraImport": true,
-        "detail": "peewee",
-        "documentation": {}
-    },
-    {
-        "label": "AutoField",
-        "importPath": "peewee",
-        "description": "peewee",
-        "isExtraImport": true,
-        "detail": "peewee",
-        "documentation": {}
-    },
-    {
-        "label": "CharField",
-        "importPath": "peewee",
-        "description": "peewee",
-        "isExtraImport": true,
-        "detail": "peewee",
-        "documentation": {}
-    },
-    {
-        "label": "DecimalField",
-        "importPath": "peewee",
-        "description": "peewee",
-        "isExtraImport": true,
-        "detail": "peewee",
-        "documentation": {}
-    },
-    {
-        "label": "IntegerField",
-        "importPath": "peewee",
-        "description": "peewee",
-        "isExtraImport": true,
-        "detail": "peewee",
-        "documentation": {}
-    },
-    {
         "label": "CockroachDatabase",
         "importPath": "playhouse.cockroachdb",
         "description": "playhouse.cockroachdb",
@@ -216,14 +136,6 @@
         "description": "fastboot.crud.base_controller",
         "isExtraImport": true,
         "detail": "fastboot.crud.base_controller",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "importPath": "models.product_model",
-        "description": "models.product_model",
-        "isExtraImport": true,
-        "detail": "models.product_model",
         "documentation": {}
     },
     {
@@ -435,6 +347,54 @@
         "documentation": {}
     },
     {
+        "label": "fields",
+        "importPath": "tortoise",
+        "description": "tortoise",
+        "isExtraImport": true,
+        "detail": "tortoise",
+        "documentation": {}
+    },
+    {
+        "label": "Tortoise",
+        "importPath": "tortoise",
+        "description": "tortoise",
+        "isExtraImport": true,
+        "detail": "tortoise",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "tortoise",
+        "description": "tortoise",
+        "isExtraImport": true,
+        "detail": "tortoise",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "tortoise",
+        "description": "tortoise",
+        "isExtraImport": true,
+        "detail": "tortoise",
+        "documentation": {}
+    },
+    {
+        "label": "fields",
+        "importPath": "tortoise",
+        "description": "tortoise",
+        "isExtraImport": true,
+        "detail": "tortoise",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "importPath": "tortoise.models",
+        "description": "tortoise.models",
+        "isExtraImport": true,
+        "detail": "tortoise.models",
+        "documentation": {}
+    },
+    {
         "label": "asynccontextmanager",
         "importPath": "contextlib",
         "description": "contextlib",
@@ -443,22 +403,6 @@
         "documentation": {}
     },
     {
-        "label": "CORSMiddleware",
-        "importPath": "fastapi.middleware.cors",
-        "description": "fastapi.middleware.cors",
-        "isExtraImport": true,
-        "detail": "fastapi.middleware.cors",
-        "documentation": {}
-    },
-    {
-        "label": "ConfigManager",
-        "importPath": "fastboot.config",
-        "description": "fastboot.config",
-        "isExtraImport": true,
-        "detail": "fastboot.config",
-        "documentation": {}
-    },
-    {
         "label": "ConfigManager",
         "importPath": "fastboot.config",
         "description": "fastboot.config",
@@ -552,14 +496,6 @@
         "description": "fastboot.exception_handler",
         "isExtraImport": true,
         "detail": "fastboot.exception_handler",
-        "documentation": {}
-    },
-    {
-        "label": "Database",
-        "importPath": "fastboot.database",
-        "description": "fastboot.database",
-        "isExtraImport": true,
-        "detail": "fastboot.database",
         "documentation": {}
     },
     {
@@ -577,30 +513,6 @@
         "importPath": "yaml",
         "description": "yaml",
         "detail": "yaml",
-        "documentation": {}
-    },
-    {
-        "label": "database_proxy",
-        "importPath": "models.base_model",
-        "description": "models.base_model",
-        "isExtraImport": true,
-        "detail": "models.base_model",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "models.base_model",
-        "description": "models.base_model",
-        "isExtraImport": true,
-        "detail": "models.base_model",
-        "documentation": {}
-    },
-    {
-        "label": "MODELS",
-        "importPath": "models.model_register",
-        "description": "models.model_register",
-        "isExtraImport": true,
-        "detail": "models.model_register",
         "documentation": {}
     },
     {
@@ -696,11 +608,11 @@
         "documentation": {}
     },
     {
-        "label": "model_to_dict",
-        "importPath": "playhouse.shortcuts",
-        "description": "playhouse.shortcuts",
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
         "isExtraImport": true,
-        "detail": "playhouse.shortcuts",
+        "detail": "models.base_model",
         "documentation": {}
     },
     {
@@ -709,6 +621,24 @@
         "description": "fastapi.testclient",
         "isExtraImport": true,
         "detail": "fastapi.testclient",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "httpx",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "httpx",
+        "description": "httpx",
+        "detail": "httpx",
         "documentation": {}
     },
     {
@@ -875,7 +805,7 @@
         "kind": 6,
         "importPath": "controllers.product_controller",
         "description": "controllers.product_controller",
-        "peekOfCode": "class ProductController(BaseController):\n    model = Product\n    prefix = \"/product\"\n    @get(\"/search_by_name/{name}\")\n    async def search_by_name(self, name: str):  \n        \"\"\"自定义接口：根据商品名查询商品\"\"\"\n        products = self.service.filter_by(name=name)\n        if products:\n            return SuccessResponse.ok([product.__data__ for product in products])\n        else:",
+        "peekOfCode": "class ProductController(BaseController):\n    model = Product\n    prefix = \"/product\"\n    @get(\"/search_by_name/{name}\")\n    async def search_by_name(self, name: str):  \n        \"\"\"自定义接口：根据商品名查询商品\"\"\"\n        product = await self.service.find_product_by_name(name)\n        if product:\n            return SuccessResponse.ok(product.to_dict())\n        else:",
         "detail": "controllers.product_controller",
         "documentation": {}
     },
@@ -902,7 +832,7 @@
         "kind": 6,
         "importPath": "fastboot.crud.base_repository",
         "description": "fastboot.crud.base_repository",
-        "peekOfCode": "class BaseRepository:\n    \"\"\"基础Repository，提供标准CRUD和扩展查询操作\"\"\"\n    def __init__(self, model):\n        self.model = model\n    def create(self, **kwargs):\n        return self.model.create(**kwargs)\n    def get_by_id(self, id):\n        try:\n            return self.model.get_by_id(id)\n        except self.model.DoesNotExist:",
+        "peekOfCode": "class BaseRepository:\n    \"\"\"基础Repository，提供标准异步CRUD和扩展查询操作\"\"\"\n    def __init__(self, model):\n        self.model = model\n    async def create(self, **kwargs):\n        \"\"\"创建新记录\"\"\"\n        instance = await self.model.create(**kwargs)\n        return instance\n    async def get_by_id(self, id):\n        \"\"\"根据ID查询记录\"\"\"",
         "detail": "fastboot.crud.base_repository",
         "documentation": {}
     },
@@ -911,7 +841,7 @@
         "kind": 6,
         "importPath": "fastboot.crud.base_service",
         "description": "fastboot.crud.base_service",
-        "peekOfCode": "class BaseService:\n    \"\"\"基础Service，封装标准操作，优先挂载用户自定义Repository\"\"\"\n    def __init__(self, model):\n        repository_cls = repository_manager.get_repository_class(model)\n        self.repository = repository_cls(model)\n    def create(self, **kwargs):\n        return self.repository.create(**kwargs)\n    def get_by_id(self, id):\n        return self.repository.get_by_id(id)\n    def get_all(self):",
+        "peekOfCode": "class BaseService:\n    \"\"\"基础Service，封装标准异步操作，优先挂载用户自定义Repository\"\"\"\n    def __init__(self, model):\n        repository_cls = repository_manager.get_repository_class(model)\n        self.repository = repository_cls(model)\n    async def create(self, **kwargs):\n        return await self.repository.create(**kwargs)\n    async def get_by_id(self, id):\n        return await self.repository.get_by_id(id)\n    async def get_all(self):",
         "detail": "fastboot.crud.base_service",
         "documentation": {}
     },
@@ -920,7 +850,7 @@
         "kind": 5,
         "importPath": "fastboot.crud.base_service",
         "description": "fastboot.crud.base_service",
-        "peekOfCode": "repository_manager = RepositoryManager()\nclass BaseService:\n    \"\"\"基础Service，封装标准操作，优先挂载用户自定义Repository\"\"\"\n    def __init__(self, model):\n        repository_cls = repository_manager.get_repository_class(model)\n        self.repository = repository_cls(model)\n    def create(self, **kwargs):\n        return self.repository.create(**kwargs)\n    def get_by_id(self, id):\n        return self.repository.get_by_id(id)",
+        "peekOfCode": "repository_manager = RepositoryManager()\nclass BaseService:\n    \"\"\"基础Service，封装标准异步操作，优先挂载用户自定义Repository\"\"\"\n    def __init__(self, model):\n        repository_cls = repository_manager.get_repository_class(model)\n        self.repository = repository_cls(model)\n    async def create(self, **kwargs):\n        return await self.repository.create(**kwargs)\n    async def get_by_id(self, id):\n        return await self.repository.get_by_id(id)",
         "detail": "fastboot.crud.base_service",
         "documentation": {}
     },
@@ -929,7 +859,7 @@
         "kind": 2,
         "importPath": "fastboot.crud.request_generator",
         "description": "fastboot.crud.request_generator",
-        "peekOfCode": "def generate_create_request_model(model_cls: Model) -> BaseModel:\n    \"\"\"生成创建用的请求体模型（部分字段必填）\"\"\"\n    fields = {}\n    for name, field in model_cls._meta.fields.items():\n        if isinstance(field, AutoField):\n            continue\n        field_type = map_peewee_field_to_python(field)\n        # 如果字段有默认值或允许为空，则设置为可选\n        if field.default is not None or field.null:\n            fields[name] = (Optional[field_type], field.default)",
+        "peekOfCode": "def generate_create_request_model(model_cls: Model) -> BaseModel:\n    \"\"\"生成创建用的请求体模型（部分字段必填）\"\"\"\n    model_fields = model_cls._meta.fields_map\n    fields_def = {}\n    for name, field in model_fields.items():\n        if isinstance(field, fields.IntField) and field.pk:\n            # 主键ID跳过\n            continue\n        python_type = map_tortoise_field_to_python(field)\n        # 是否有默认值或者可空",
         "detail": "fastboot.crud.request_generator",
         "documentation": {}
     },
@@ -938,16 +868,16 @@
         "kind": 2,
         "importPath": "fastboot.crud.request_generator",
         "description": "fastboot.crud.request_generator",
-        "peekOfCode": "def generate_update_request_model(model_cls: Model) -> BaseModel:\n    \"\"\"生成更新用的请求体模型（字段可选）\"\"\"\n    fields = {}\n    for name, field in model_cls._meta.fields.items():\n        if isinstance(field, AutoField):\n            continue\n        field_type = map_peewee_field_to_python(field)\n        fields[name] = (Optional[field_type], None)\n    UpdateRequestModel = create_model(\n        f\"{model_cls.__name__}UpdateRequest\",",
+        "peekOfCode": "def generate_update_request_model(model_cls: Model) -> BaseModel:\n    \"\"\"生成更新用的请求体模型（所有字段都可选）\"\"\"\n    model_fields = model_cls._meta.fields_map\n    fields_def = {}\n    for name, field in model_fields.items():\n        if isinstance(field, fields.IntField) and field.pk:\n            # 主键ID跳过\n            continue\n        python_type = map_tortoise_field_to_python(field)\n        fields_def[name] = (Optional[python_type], None)",
         "detail": "fastboot.crud.request_generator",
         "documentation": {}
     },
     {
-        "label": "map_peewee_field_to_python",
+        "label": "map_tortoise_field_to_python",
         "kind": 2,
         "importPath": "fastboot.crud.request_generator",
         "description": "fastboot.crud.request_generator",
-        "peekOfCode": "def map_peewee_field_to_python(field: Field):\n    \"\"\"将Peewee字段类型映射为Python基础类型\"\"\"\n    from peewee import IntegerField, CharField, DecimalField, FloatField, BooleanField\n    if isinstance(field, IntegerField):\n        return int\n    elif isinstance(field, CharField):\n        return str\n    elif isinstance(field, DecimalField):\n        return float\n    elif isinstance(field, FloatField):",
+        "peekOfCode": "def map_tortoise_field_to_python(field: fields.Field):\n    \"\"\"将Tortoise ORM字段映射为Python基础类型\"\"\"\n    if isinstance(field, fields.IntField):\n        return int\n    elif isinstance(field, fields.CharField):\n        return str\n    elif isinstance(field, fields.DecimalField):\n        return float\n    elif isinstance(field, fields.FloatField):\n        return float",
         "detail": "fastboot.crud.request_generator",
         "documentation": {}
     },
@@ -956,7 +886,7 @@
         "kind": 6,
         "importPath": "fastboot.application",
         "description": "fastboot.application",
-        "peekOfCode": "class FastBootApp:\n    def __init__(self):\n        self.database = Database()\n        self.config = ConfigManager()\n        self.logger = Logger()\n        self.services = ServiceManager()\n        # 初始化但不连接\n        self.database.initialize()\n        # 创建FastAPI实例，挂载lifespan\n        self.app = FastAPI(lifespan=self._lifespan)",
+        "peekOfCode": "class FastBootApp:\n    def __init__(self):\n        self.database = Database()\n        self.config = ConfigManager()\n        self.logger = Logger()\n        self.services = ServiceManager()\n        # 初始化数据库配置\n        self.database.initialize()\n        # 创建FastAPI实例，挂载lifespan\n        self.app = FastAPI(lifespan=self._lifespan)",
         "detail": "fastboot.application",
         "documentation": {}
     },
@@ -974,7 +904,7 @@
         "kind": 6,
         "importPath": "fastboot.database",
         "description": "fastboot.database",
-        "peekOfCode": "class Database:\n    \"\"\"数据库管理器\"\"\"\n    def __init__(self):\n        self.config = ConfigManager()\n        self.logger = Logger()\n        self.db = None  # 先不连接，只定义\n    def initialize(self):\n        \"\"\"初始化数据库连接对象，不实际连接\"\"\"\n        db_config = self.config.get(\"database\")\n        self.db = MySQLDatabase(",
+        "peekOfCode": "class Database:\n    \"\"\"Tortoise ORM 异步数据库管理器\"\"\"\n    def __init__(self):\n        self.config = ConfigManager()\n        self.logger = Logger()\n        self.db_config = None\n    def initialize(self):\n        \"\"\"初始化数据库配置，不连接\"\"\"\n        self.db_config = self.config.get(\"database\")\n        if not self.db_config:",
         "detail": "fastboot.database",
         "documentation": {}
     },
@@ -1073,26 +1003,8 @@
         "kind": 6,
         "importPath": "models.base_model",
         "description": "models.base_model",
-        "peekOfCode": "class BaseModel(Model):\n    \"\"\"所有模型统一继承的基类\"\"\"\n    class Meta:\n        database = database_proxy\n    def to_dict(self):\n        \"\"\"将模型对象转换为字典\"\"\"\n        return model_to_dict(self)",
+        "peekOfCode": "class BaseModel(models.Model):\n    \"\"\"所有模型统一继承的基类\"\"\"\n    id = fields.IntField(pk=True)  # 主键ID，Tortoise需要显式声明\n    class Meta:\n        abstract = True  # 声明这是一个抽象基类，Tortoise不会给它单独建表\n    def to_dict(self):\n        \"\"\"将模型对象转换为字典\"\"\"\n        data = {}\n        for field in self._meta.fields_map:\n            data[field] = getattr(self, field)",
         "detail": "models.base_model",
-        "documentation": {}
-    },
-    {
-        "label": "database_proxy",
-        "kind": 5,
-        "importPath": "models.base_model",
-        "description": "models.base_model",
-        "peekOfCode": "database_proxy = DatabaseProxy()\nclass BaseModel(Model):\n    \"\"\"所有模型统一继承的基类\"\"\"\n    class Meta:\n        database = database_proxy\n    def to_dict(self):\n        \"\"\"将模型对象转换为字典\"\"\"\n        return model_to_dict(self)",
-        "detail": "models.base_model",
-        "documentation": {}
-    },
-    {
-        "label": "MODELS",
-        "kind": 5,
-        "importPath": "models.model_register",
-        "description": "models.model_register",
-        "peekOfCode": "MODELS = [\n    Product,\n    # 以后新加的表继续往这里加\n]",
-        "detail": "models.model_register",
         "documentation": {}
     },
     {
@@ -1100,7 +1012,7 @@
         "kind": 6,
         "importPath": "models.product_model",
         "description": "models.product_model",
-        "peekOfCode": "class Product(BaseModel):\n    \"\"\"商品表模型\"\"\"\n    id = AutoField(primary_key=True)\n    name = CharField()\n    price = IntegerField()",
+        "peekOfCode": "class Product(BaseModel):\n    \"\"\"商品表模型\"\"\"\n    name = fields.CharField(max_length=255)\n    price = fields.IntField()",
         "detail": "models.product_model",
         "documentation": {}
     },
@@ -1109,7 +1021,7 @@
         "kind": 6,
         "importPath": "repositories.product_repository",
         "description": "repositories.product_repository",
-        "peekOfCode": "class ProductRepository(BaseRepository):\n    \"\"\"自定义Product数据访问层\"\"\"\n    def get_by_name(self, name: str):\n        \"\"\"根据商品名查询商品\"\"\"\n        return self.model.select().where(self.model.name == name).first()",
+        "peekOfCode": "class ProductRepository(BaseRepository):\n    \"\"\"自定义Product数据访问层\"\"\"\n    async def get_by_name(self, name: str):\n        \"\"\"根据商品名查询商品\"\"\"\n        return await Product.filter(name=name).first()",
         "detail": "repositories.product_repository",
         "documentation": {}
     },
@@ -1118,7 +1030,7 @@
         "kind": 6,
         "importPath": "services.product_service",
         "description": "services.product_service",
-        "peekOfCode": "class ProductService(BaseService):\n    \"\"\"自定义Product业务逻辑\"\"\"\n    def find_product_by_name(self, name: str):\n        \"\"\"调用自定义Repository方法\"\"\"\n        return self.repository.get_by_name(name)",
+        "peekOfCode": "class ProductService(BaseService):\n    \"\"\"自定义Product业务逻辑\"\"\"\n    async def find_product_by_name(self, name: str):\n        \"\"\"调用自定义Repository方法\"\"\"\n        return await self.repository.get_by_name(name)",
         "detail": "services.product_service",
         "documentation": {}
     },
@@ -1195,65 +1107,11 @@
         "documentation": {}
     },
     {
-        "label": "test_create_product",
-        "kind": 2,
-        "importPath": "tests.test_product_api",
-        "description": "tests.test_product_api",
-        "peekOfCode": "def test_create_product():\n    payload = {\"name\": \"FastBoot商品\", \"price\": 888}\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    print(\"创建返回：\", response.json())\n    assert response.status_code == 200\n    return response.json()[\"data\"]\ndef test_get_product(product_id):\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    print(\"查询返回：\", response.json())\n    assert response.status_code == 200",
-        "detail": "tests.test_product_api",
-        "documentation": {}
-    },
-    {
-        "label": "test_get_product",
-        "kind": 2,
-        "importPath": "tests.test_product_api",
-        "description": "tests.test_product_api",
-        "peekOfCode": "def test_get_product(product_id):\n    response = requests.get(f\"{BASE_URL}/get/{product_id}\")\n    print(\"查询返回：\", response.json())\n    assert response.status_code == 200\ndef test_find_product_by_name():\n    # 这里我们要直接测试 ProductService.find_product_by_name()\n    from services.product_service import ProductService\n    from models.product_model import Product\n    service = ProductService(Product)\n    product = service.find_product_by_name(\"FastBoot商品\")",
-        "detail": "tests.test_product_api",
-        "documentation": {}
-    },
-    {
-        "label": "test_find_product_by_name",
-        "kind": 2,
-        "importPath": "tests.test_product_api",
-        "description": "tests.test_product_api",
-        "peekOfCode": "def test_find_product_by_name():\n    # 这里我们要直接测试 ProductService.find_product_by_name()\n    from services.product_service import ProductService\n    from models.product_model import Product\n    service = ProductService(Product)\n    product = service.find_product_by_name(\"FastBoot商品\")\n    print(\"根据商品名查找：\", product.__data__ if product else None)\n    assert product is not None\n    assert product.name == \"FastBoot商品\"\ndef test_delete_product(product_id):",
-        "detail": "tests.test_product_api",
-        "documentation": {}
-    },
-    {
-        "label": "test_delete_product",
-        "kind": 2,
-        "importPath": "tests.test_product_api",
-        "description": "tests.test_product_api",
-        "peekOfCode": "def test_delete_product(product_id):\n    response = requests.post(f\"{BASE_URL}/delete/{product_id}\")\n    print(\"删除返回：\", response.json())\n    assert response.status_code == 200\ndef cleanup():\n    try:\n        if db and db.db and not db.db.is_closed():\n            db.close()\n    except:\n        pass",
-        "detail": "tests.test_product_api",
-        "documentation": {}
-    },
-    {
-        "label": "cleanup",
-        "kind": 2,
-        "importPath": "tests.test_product_api",
-        "description": "tests.test_product_api",
-        "peekOfCode": "def cleanup():\n    try:\n        if db and db.db and not db.db.is_closed():\n            db.close()\n    except:\n        pass\nif __name__ == \"__main__\":\n    try:\n        print(\"✅ 开始测试FastBoot自定义扩展能力\")\n        product_id = test_create_product()",
-        "detail": "tests.test_product_api",
-        "documentation": {}
-    },
-    {
         "label": "BASE_URL",
         "kind": 5,
         "importPath": "tests.test_product_api",
         "description": "tests.test_product_api",
-        "peekOfCode": "BASE_URL = \"http://localhost:8080/product\"\n# 初始化数据库连接\ndb = Database()\ndb.initialize()  # 添加这行\ndb.connect()     # 添加这行\ndef test_create_product():\n    payload = {\"name\": \"FastBoot商品\", \"price\": 888}\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    print(\"创建返回：\", response.json())\n    assert response.status_code == 200",
-        "detail": "tests.test_product_api",
-        "documentation": {}
-    },
-    {
-        "label": "db",
-        "kind": 5,
-        "importPath": "tests.test_product_api",
-        "description": "tests.test_product_api",
-        "peekOfCode": "db = Database()\ndb.initialize()  # 添加这行\ndb.connect()     # 添加这行\ndef test_create_product():\n    payload = {\"name\": \"FastBoot商品\", \"price\": 888}\n    response = requests.post(f\"{BASE_URL}/create\", json=payload)\n    print(\"创建返回：\", response.json())\n    assert response.status_code == 200\n    return response.json()[\"data\"]\ndef test_get_product(product_id):",
+        "peekOfCode": "BASE_URL = \"http://localhost:8080/product\"\nasync def test_create_product(client):\n    \"\"\"测试创建商品\"\"\"\n    payload = {\"name\": \"FastBoot商品\", \"price\": 888}\n    response = await client.post(f\"{BASE_URL}/create\", json=payload)\n    response_data = response.json()\n    print(\"创建返回：\", response_data)\n    assert response.status_code == 200, f\"创建失败: {response_data}\"\n    return response_data[\"data\"]  # 返回新建的商品ID\nasync def test_get_product(client, product_id):",
         "detail": "tests.test_product_api",
         "documentation": {}
     },

@@ -1,57 +1,60 @@
-#fastboot\crud\base_repository.py
-"""通用基础数据访问层，封装标准CRUD + 扩展操作"""
+# fastboot/crud/base_repository.py
+
+"""通用基础数据访问层（Tortoise ORM异步版），封装标准CRUD + 扩展操作"""
 
 class BaseRepository:
-    """基础Repository，提供标准CRUD和扩展查询操作"""
+    """基础Repository，提供标准异步CRUD和扩展查询操作"""
 
     def __init__(self, model):
         self.model = model
 
-    def create(self, **kwargs):
-        return self.model.create(**kwargs)
+    async def create(self, **kwargs):
+        """创建新记录"""
+        instance = await self.model.create(**kwargs)
+        return instance
 
-    def get_by_id(self, id):
+    async def get_by_id(self, id):
+        """根据ID查询记录"""
         try:
-            return self.model.get_by_id(id)
+            instance = await self.model.get(id=id)
+            return instance
         except self.model.DoesNotExist:
             return None
 
-    def get_all(self):
-        return list(self.model.select())
+    async def get_all(self):
+        """查询所有记录"""
+        instances = await self.model.all()
+        return instances
 
-    def update(self, id, **kwargs):
-        query = self.model.update(**kwargs).where(self.model.id == id)
-        return query.execute()
+    async def update(self, id, **kwargs):
+        """根据ID更新记录"""
+        update_count = await self.model.filter(id=id).update(**kwargs)
+        return update_count
 
-    def delete(self, id):
-        query = self.model.delete().where(self.model.id == id)
-        return query.execute()
+    async def delete(self, id):
+        """根据ID删除记录"""
+        delete_count = await self.model.filter(id=id).delete()
+        return delete_count
 
-    # 🚀 新增扩展方法
-    def filter_by(self, **kwargs):
+    async def filter_by(self, **kwargs):
         """根据条件过滤查询"""
-        query = self.model.select()
-        for k, v in kwargs.items():
-            query = query.where(getattr(self.model, k) == v)
-        return list(query)
+        query = self.model.filter(**kwargs)
+        instances = await query.all()
+        return instances
 
-    def exists_by(self, **kwargs):
+    async def exists_by(self, **kwargs):
         """检查是否存在符合条件的记录"""
-        query = self.model.select()
-        for k, v in kwargs.items():
-            query = query.where(getattr(self.model, k) == v)
-        return query.exists()
+        exists = await self.model.filter(**kwargs).exists()
+        return exists
 
-    def count_by(self, **kwargs):
+    async def count_by(self, **kwargs):
         """符合条件的记录数量"""
-        query = self.model.select()
-        for k, v in kwargs.items():
-            query = query.where(getattr(self.model, k) == v)
-        return query.count()
+        count = await self.model.filter(**kwargs).count()
+        return count
 
-    def paginate(self, page: int = 1, page_size: int = 10, **kwargs):
+    async def paginate(self, page: int = 1, page_size: int = 10, **kwargs):
         """分页查询"""
-        query = self.model.select()
-        for k, v in kwargs.items():
-            query = query.where(getattr(self.model, k) == v)
-        return list(query.paginate(page, page_size))
+        offset = (page - 1) * page_size
+        query = self.model.filter(**kwargs).offset(offset).limit(page_size)
+        instances = await query.all()
+        return instances
