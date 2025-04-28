@@ -1150,5 +1150,32 @@
         "peekOfCode": "BASE_URL = \"http://localhost:8080\"\ndef test_register_user():\n    url = f\"{BASE_URL}/user/register\"\n    data = {\n        \"name\": \"Alice\",\n        \"age\": 22\n    }\n    response = requests.post(url, json=data)\n    print(\"注册用户返回：\", response.json())\n    assert response.status_code == 200",
         "detail": "tests.test_user_api",
         "documentation": {}
+    },
+    {
+        "label": "count_lines_of_code",
+        "kind": 2,
+        "importPath": "count_lines",
+        "description": "count_lines",
+        "peekOfCode": "def count_lines_of_code(directory):\n    total_files = 0\n    total_lines = 0\n    file_details = []\n    for root, dirs, files in os.walk(directory):\n        # 过滤掉无关目录\n        dirs[:] = [d for d in dirs if d not in EXCLUDE_DIRS]\n        for file in files:\n            if any(file.endswith(ext) for ext in INCLUDE_EXTENSIONS):\n                total_files += 1",
+        "detail": "count_lines",
+        "documentation": {}
+    },
+    {
+        "label": "EXCLUDE_DIRS",
+        "kind": 5,
+        "importPath": "count_lines",
+        "description": "count_lines",
+        "peekOfCode": "EXCLUDE_DIRS = {'.venv', 'venv', '__pycache__', '.git', '.idea', '.vscode'}\n# 要统计的文件后缀\nINCLUDE_EXTENSIONS = {'.py'}\ndef count_lines_of_code(directory):\n    total_files = 0\n    total_lines = 0\n    file_details = []\n    for root, dirs, files in os.walk(directory):\n        # 过滤掉无关目录\n        dirs[:] = [d for d in dirs if d not in EXCLUDE_DIRS]",
+        "detail": "count_lines",
+        "documentation": {}
+    },
+    {
+        "label": "INCLUDE_EXTENSIONS",
+        "kind": 5,
+        "importPath": "count_lines",
+        "description": "count_lines",
+        "peekOfCode": "INCLUDE_EXTENSIONS = {'.py'}\ndef count_lines_of_code(directory):\n    total_files = 0\n    total_lines = 0\n    file_details = []\n    for root, dirs, files in os.walk(directory):\n        # 过滤掉无关目录\n        dirs[:] = [d for d in dirs if d not in EXCLUDE_DIRS]\n        for file in files:\n            if any(file.endswith(ext) for ext in INCLUDE_EXTENSIONS):",
+        "detail": "count_lines",
+        "documentation": {}
     }
 ]
