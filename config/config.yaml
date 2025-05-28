@@ -1,18 +1,52 @@
 # config/config.yaml
 
 app:
-  name: "FastBoot Application"
+  name: "FastBootApp (YAML)"
+  version: "0.3.1"
   host: "0.0.0.0"
-  port: 8080
-  debug: true  # 是否开启DEBUG模式
+  port: 8000
+  modules_package: "modules"
+  log_level: "DEBUG" # 可以设为DEBUG方便查看日志
+  env: "dev"
+  enable_class_router_scanner: false
+  description: "一个使用FastBoot框架构建的强大应用"
 
-logging:
-  level: "INFO"  # 日志等级：DEBUG, INFO, WARNING, ERROR
+# --- 数据库配置 ---
+# 您可以根据当前使用的数据库类型，取消注释对应的配置节，并注释掉另一个。
+# 或者，通过环境变量 (如 FASTBOOT_DB_TYPE) 来完全覆盖这里的设置。
 
-database:
-  type: "mysql"  # 数据库类型，可以是mysql, postgresql等
-  host: "localhost"
-  port: 3306
-  username: "root"
-  password: "Qin2002."
-  name: "fastboot"
+db:
+  type: "sqlite"  # 当前激活: SQLite
+  name: "./my_app_database.db" # SQLite数据库文件路径 (相对于项目根目录)
+  # username: # SQLite不需要
+  # password: # SQLite不需要
+  # host:     # SQLite不需要
+  # port:     # SQLite不需要
+  generate_schemas: true # 开发时可以设为true
+
+# db:
+#   type: "mysql"   # 示例: MySQL 配置 (当前被注释)
+#   name: "fastboot_db_name"
+#   username: "your_mysql_user"    # 建议通过环境变量覆盖
+#   password: "your_mysql_password"  # 建议通过环境变量覆盖
+#   host: "localhost"              # 或数据库服务器IP/域名
+#   port: 3306
+#   generate_schemas: false # 生产环境通常设为false
+
+# db:
+#   type: "postgresql" # 示例: PostgreSQL 配置 (当前被注释)
+#   name: "fastboot_pg_db"
+#   username: "your_pg_user"
+#   password: "your_pg_password"
+#   host: "localhost"
+#   port: 5432
+#   generate_schemas: false
+
+cors:
+  allow_origins: ["*"] # 示例：允许特定前端源
+  allow_credentials: true
+  allow_methods: ["*"]
+  allow_headers: ["*"]
+
+logging: # 兼容旧的 logging.level, 但 app.log_level 优先级更高
+  level: "INFO"
